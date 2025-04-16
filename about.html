@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> About </title>
+
+    <!--My css-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/company logo icon.png" type="image/png">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        /* Header */
+
+        header {
+            position: relative;
+            width: 100%;
+            height: 40vh;
+            display: grid;
+            place-items: center;
+            background: url('img/about-bg.jpg') no-repeat center center/cover;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        header * {
+            position: relative;
+            z-index: 2;
+        }
+
+        header h1 {
+            font-weight: 900;
+        }
+
+        /* Merdia Queries */
+
+        @media screen and (max-width: 1260px) {
+            header h1 {
+                font-size: 30px;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            header {
+                height: auto;
+            }
+        }
+    </style>
+
+</head>
+
+<body style="background-color:aliceblue;">
+
+    <!-- NavBar -->
+    <nav id="Navbar" class="navbar px-3 px-md-5 py-md-1">
+        <div class="website-name text-white">
+            <img src="img/company logo icon.png" alt="">
+            <h2 class="logo-style ps-2"> <span style="color: rgb(75, 3, 109)">Hisho </span> & Kanri </h2>
+        </div>
+
+        <div class="navbar-menu pe-5">
+            <ul class="navbar-menu-links text-white">
+                <a href="home.html">
+                    <li> Home </li>
+                </a>
+
+                <a href="about.html">
+                    <li> About US</li>
+                </a>
+
+                <a href="#" class="dropdown-service">
+                    <li id="serviceToggle"> Service </li>
+                </a>
+
+                <a href="insights.html">
+                    <li> News & insights </li>
+                </a>
+
+                <a href="careers.html">
+                    <li> Careers </li>
+                </a>
+
+                <a href="contact.html">
+                    <li> Contact </li>
+                </a>
+            </ul>
+
+            <div class="login-btn ms-4">
+                <a href="login.html"> <button> <i class="fa-solid fa-right-to-bracket"></i> Login </button> </a>
+            </div>
+        </div>
+
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+            <i class="bi bi-list"></i>
+        </div>
+    </nav>
+
+    <!--Header-->
+    <header id="Home" class="text-white text-center py-5">
+        <div class="container py-5">
+            <h1 class="pt-3 pt-md-0"> ABOUT US </h1>
+            <h6>
+                <a href="home.html" class="text-white" style="text-decoration: none;">Home</a>
+                <span class="px-2"> // </span>
+                <a href="about.html" style="color: rgb(238, 84, 148);cursor: pointer;text-decoration: none;"> About Us
+                </a>
+            </h6>
+        </div>
+    </header>
+
+    <!--Side Navbar-->
+    <aside class="side-navbar">
+        <p class="cross-symbol" onclick="closenavbar()"> <i class="fa fa-times" aria-hidden="true"></i> </p>
+
+        <img src="img/company-logo.png" alt="">
+
+        <!--
+        <div class="website-name">
+            <h2 class="logo-style" style="font-size: 20px;"> Hisho & Kanri </h2>
+        </div>
+        -->
+
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"> <a href="home.html"> Home </a> </p>
+            <p class="side-navbar-link"> <a href="about.html"> About </a> </p>
+            <p class="side-navbar-link" onclick="toggleTopServiceDropdown()">
+                <a href="#" class="dropdown-service">
+                    <span id="serviceToggle"> Service </span>
+                </a>
+            </p>
+            <p class="side-navbar-link"> <a href="insights.html"> News & insights </a> </p>
+            <p class="side-navbar-link"> <a href="careers.html"> Careers </a> </p>
+            <p class="side-navbar-link"> <a href="contact.html"> Contact </a> </p>
+            <a href="login.html"><button> <i class="fa-solid fa-right-to-bracket"></i> Login </button></a>
+        </div>
+    </aside>
+
+    <main class="about-main-content">
+
+        <!-- Service option-->
+        <div class="service-dropdown" id="serviceDropdown">
+            <div class="dropdown-title pb-2">
+                <h5> Select Your Country </h5>
+            </div>
+
+            <a href="IndianService.html" class="service-item d-flex align-items-center">
+                <img src="img/india-flag.jpg" alt="India" class="flag-icon mx-2">
+                <span> India </span>
+            </a>
+
+            <a href="SingaporeService.html" class="service-item d-flex align-items-center">
+                <img src="img/singapore-flag.jpg" alt="Singapore" class="flag-icon mx-2">
+                <span> Singapore </span>
+            </a>
+
+            <a href="MalaysiaService.html" class="service-item d-flex align-items-center">
+                <img src="img/malaysian flag.jpg" alt="Malaysia" class="flag-icon mx-2">
+                <span> Malaysia </span>
+            </a>
+        </div>
+
+        <!--Sidebar service option-->
+        <div id="topServiceDropdown" class="top-service-dropdown">
+            <div class="dropdown-title pb-2">
+                <h5> Select Your Country </h5>
+            </div>
+
+            <a href="IndianService.html" class="service-item d-flex align-items-center">
+                <img src="img/india-flag.jpg" alt="India" class="flag-icon mx-2">
+                <span> India </span>
+            </a>
+
+            <a href="SingaporeService.html" class="service-item d-flex align-items-center">
+                <img src="img/singapore-flag.jpg" alt="Singapore" class="flag-icon mx-2">
+                <span> Singapore </span>
+            </a>
+
+            <a href="MalaysiaService.html" class="service-item d-flex align-items-center">
+                <img src="img/malaysian flag.jpg" alt="Malaysia" class="flag-icon mx-2">
+                <span> Malaysia </span>
+            </a>
+        </div>
+
+        <!--About us-->
+        <section class="aboutus-box py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Image Column -->
+                    <div class="col-12 col-md-6 mb-4 mb-md-0">
+                        <div class="aboutus-img-box p-3">
+                            <div class="aboutus-img1"></div>
+                            <div class="aboutus-img2"></div>
+                        </div>
+                    </div>
+
+                    <!-- Text Column -->
+                    <div class="col-12 col-md-6">
+                        <div class="aboutus-content px-2">
+                            <div class="aboutus-title">
+                                <h5 class="px-md-4" style="color: rgb(247, 37, 124);"> About Us </h5>
+                                <div class="line me-2"> </div>
+                            </div>
+
+                            <h3> We Are the Leading <span style="color: rgb(247, 37, 124);"> Compliance </span> & <span
+                                    style="color: rgb(247, 37, 124);"> Taxation </span> Partner </h3>
+
+
+                            <p class="pt-2" style="text-align: justify;">
+                                At Hisho & Kanri Pvt Ltd, we are a growing professional services firm dedicated to
+                                delivering
+                                expert
+                                solutions in accounting, taxation, financial management, and corporate compliance. With
+                                a
+                                presence in
+                                Singapore, Malaysia, and India, we bridge global standards with local expertise to
+                                support
+                                businesses
+                                across regions.
+                            </p>
+
+                            <p style="text-align: justify;">
+                                Our mission is to simplify complex financial and regulatory processes so you can focus
+                                on
+                                scaling your
+                                business. Whether you're a startup or an established enterprise, we tailor solutions
+                                that
+                                ensure
+                                accuracy, transparency, and compliance at every stage.
+                            </p>
+
+                            <h5><i class="fa-solid fa-check pe-2"></i> Expert financial solutions tailored to your goals
+                            </h5>
+                            <h5><i class="fa-solid fa-check pe-2"></i> Supporting businesses across Singapore, Malaysia
+                                &
+                                India
+                            </h5>
+                            <h5><i class="fa-solid fa-check pe-2"></i> Trusted by fast-growing and global enterprises
+                            </h5>
+
+                            <div class="discover-more mt-4">
+                                <a href="#"> <button> Discover More <i
+                                            class="fa-solid fa-arrow-right text-white ps-2"></i> </button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section-->
+        <section class="stats-section text-white px-4">
+            <div class="container">
+                <div class="row text-center">
+
+                    <!-- Box 1 -->
+                    <div class="col-12 col-md-3 mb-4 mb-md-0">
+                        <div class="stats-box">
+                            <div class="icon-box">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <h2 class="count" data-target="100">0</h2>
+                            <p>+ Project Done</p>
+                        </div>
+                    </div>
+
+                    <!-- Box 2 -->
+                    <div class="col-12 col-md-3 mb-4 mb-md-0">
+                        <div class="stats-box">
+                            <div class="icon-box">
+                                <i class="fas fa-thumbs-up"></i>
+                            </div>
+                            <h2 class="count" data-target="80">0</h2>
+                            <p>+ Happy Clients</p>
+                        </div>
+                    </div>
+
+                    <!-- Box 3 -->
+                    <div class="col-12 col-md-3 mb-4 mb-md-0">
+                        <div class="stats-box">
+                            <div class="icon-box">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h2 class="count" data-target="20">0</h2>
+                            <p>+ Total Employee</p>
+                        </div>
+                    </div>
+
+                    <!-- Box 4 -->
+                    <div class="col-12 col-md-3">
+                        <div class="stats-box">
+                            <div class="icon-box">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <h2 class="count" data-target="50">0</h2>
+                            <p>+ Win Awards</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Skills-->
+        <section class="our-skills py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Text Column -->
+                    <div class="col-12 col-md-6">
+                        <div class="our-skills-content py-3">
+                            <div class="aboutus-title">
+                                <h5 class="px-md-4" style="color: rgb(247, 37, 124);"> Our Skills </h5>
+                                <div class="line me-2"> </div>
+                            </div>
+
+                            <h3 class="pt-2"> Expert <span style="color: rgb(247, 37, 124);"> Financial </span> & <span
+                                    style="color: rgb(247, 37, 124);"> Compliance Solutions </span> — Bridging Global
+                                Standards with
+                                Local
+                                Expertise </h3>
+
+                            <p class="pt-3" style="text-align: justify;"> At Hisho & Kanri Pvt Ltd, we provide tailored
+                                financial solutions designed to meet the dynamic needs of modern businesses. From
+                                accounting and taxation to financial strategy and regulatory compliance, our team
+                                delivers expertise you can rely on. With a presence in Singapore, Malaysia, and India,
+                                we combine global best practices with local knowledge to help your business grow with
+                                confidence and clarity. </p>
+
+                            <div class="container my-4">
+                                <div class="mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <span><strong>Investment Plan</strong></span>
+                                        <span><strong>82%</strong></span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar" style="width: 85%; background-color: #f7257c;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <span><strong>Consulting Experience</strong></span>
+                                        <span><strong>60%</strong></span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar" style="width: 65%; background-color: #f7257c;"></div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="d-flex justify-content-between">
+                                        <span><strong>Banking Consulting</strong></span>
+                                        <span><strong>78%</strong></span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar" style="width: 75%; background-color: #f7257c;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Image Column -->
+                    <div class="col-12 col-md-6 mb-4 mb-md-0">
+                        <div class="our-skill-img p-2"> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Testimonials -->
+        <section class="client-testimonial">
+            <div class="container">
+                <div class="zigzag-line-top"></div>
+                <h4 class="text-center pt-4" style="color: rgb(247, 37, 124);"> Testimonials </h4>
+                <h1 class="text-white"> What Clients Are Saying </h1>
+                <p class="text-white px-2"> At Hisho & Kanri Accounting, we understand that clear, reliable financial
+                    insights are essential —
+                    not just
+                    numbers, but the story behind them. </p>
+                <div class="review-slider p-2">
+                    <div class="wrapper">
+
+                        <ul class="carousel">
+
+                            <li class="card">
+
+                                <div class="client-review-box">
+                                    <h6 style="line-height: 1.8;"> <i class="fa-solid fa-quote-left pe-2"></i> The team
+                                        at Hisho & Kanri
+                                        Accounting provided excellent advice
+                                        on our financial planning. Highly recommend their services ! <i
+                                            class="fa-solid fa-quote-right ps-2"></i>
+                                    </h6>
+                                </div>
+
+                                <p class="line"></p>
+
+                                <div class="reviewer-client-details-box">
+                                    <div class="img">
+                                        <img src="img/client1.jpg" alt="Client Image" draggable="false">
+                                    </div>
+
+                                    <div class="reviewer-details">
+                                        <h5> Thomas Roy </h5>
+                                        <h6 class="text-white pt-2"> Founder & CEO </h6>
+                                    </div>
+                                </div>
+
+                                <div class="review-stars pt-3">
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                </div>
+
+                            </li>
+
+                            <li class="card">
+
+                                <div class="client-review-box">
+                                    <h6 style="line-height: 1.8;"> <i class="fa-solid fa-quote-left pe-2"></i>
+                                        Exceptional service. We trust Hisho & Kanri Accounting with all our bookkeeping
+                                        needs, and
+                                        they've never let us down. <i class="fa-solid fa-quote-right ps-2"></i>
+                                    </h6>
+                                </div>
+
+                                <p class="line"></p>
+
+                                <div class="reviewer-client-details-box">
+                                    <div class="img">
+                                        <img src="img/client2.jpeg" alt="Client Image" draggable="false">
+                                    </div>
+
+                                    <div class="reviewer-details">
+                                        <h5> Thomas Roy </h5>
+                                        <h6 class="text-white pt-2"> Founder & CEO </h6>
+                                    </div>
+                                </div>
+
+                                <div class="review-stars pt-3">
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                </div>
+
+                            </li>
+
+                            <li class="card">
+
+                                <div class="client-review-box">
+                                    <h6 style="line-height: 1.8;"> <i class="fa-solid fa-quote-left pe-2"></i> Hisho &
+                                        Kanri Accounting helped us streamline our finances, and their guidance was
+                                        invaluable for our growth. <i class="fa-solid fa-quote-right ps-2"></i>
+                                    </h6>
+                                </div>
+
+                                <p class="line"></p>
+
+                                <div class="reviewer-client-details-box">
+                                    <div class="img">
+                                        <img src="img/client3.jpeg" alt="Client Image" draggable="false">
+                                    </div>
+
+                                    <div class="reviewer-details">
+                                        <h5> Thomas Roy </h5>
+                                        <h6 class="text-white pt-2"> Founder & CEO </h6>
+                                    </div>
+                                </div>
+
+                                <div class="review-stars pt-3">
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                </div>
+
+                            </li>
+
+                            <li class="card">
+
+                                <div class="client-review-box">
+                                    <h6 style="line-height: 1.8;"> <i class="fa-solid fa-quote-left pe-2"></i> The team
+                                        at Hisho & Kanri
+                                        Accounting provided excellent advice
+                                        on our financial planning. Highly recommend their services ! <i
+                                            class="fa-solid fa-quote-right ps-2"></i>
+                                    </h6>
+                                </div>
+
+                                <p class="line"></p>
+
+                                <div class="reviewer-client-details-box">
+                                    <div class="img">
+                                        <img src="img/client1.jpg" alt="Client Image" draggable="false">
+                                    </div>
+
+                                    <div class="reviewer-details">
+                                        <h5> Thomas Roy </h5>
+                                        <h6 class="text-white pt-2"> Founder & CEO </h6>
+                                    </div>
+                                </div>
+
+                                <div class="review-stars pt-3">
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                </div>
+
+                            </li>
+
+                            <li class="card">
+
+                                <div class="client-review-box">
+                                    <h6 style="line-height: 1.8;"> <i class="fa-solid fa-quote-left pe-2"></i>
+                                        Exceptional service. We trust Hisho & Kanri Accounting with all our bookkeeping
+                                        needs, and
+                                        they've never let us down. <i class="fa-solid fa-quote-right ps-2"></i>
+                                    </h6>
+                                </div>
+
+                                <p class="line"></p>
+
+                                <div class="reviewer-client-details-box">
+                                    <div class="img">
+                                        <img src="img/client2.jpeg" alt="Client Image" draggable="false">
+                                    </div>
+
+                                    <div class="reviewer-details">
+                                        <h5> Thomas Roy </h5>
+                                        <h6 class="text-white pt-2"> Founder & CEO </h6>
+                                    </div>
+                                </div>
+
+                                <div class="review-stars pt-3">
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                </div>
+
+                            </li>
+
+                            <li class="card">
+
+                                <div class="client-review-box">
+                                    <h6 style="line-height: 1.8;"> <i class="fa-solid fa-quote-left pe-2"></i> Hisho &
+                                        Kanri Accounting helped us streamline our finances, and their guidance was
+                                        invaluable for our growth. <i class="fa-solid fa-quote-right ps-2"></i>
+                                    </h6>
+                                </div>
+
+                                <p class="line"></p>
+
+                                <div class="reviewer-client-details-box">
+                                    <div class="img">
+                                        <img src="img/client3.jpeg" alt="Client Image" draggable="false">
+                                    </div>
+
+                                    <div class="reviewer-details">
+                                        <h5> Thomas Roy </h5>
+                                        <h6 class="text-white pt-2"> Founder & CEO </h6>
+                                    </div>
+                                </div>
+
+                                <div class="review-stars pt-3">
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                    <i class="fa-solid fa-star pe-2"></i>
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+                        <div class="arrow-btn">
+                            <i id="left" class="fa-solid fa-angle-left"></i>
+                            <i id="right" class="fa-solid fa-angle-right"></i>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="zigzag-line-bottom"></div>
+            </div>
+        </section>
+
+        <!-- Lets Talk -->
+        <section class="lets-talk-box py-5 px-3"
+            style="background-color: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px);">
+            <div class="lets-talk-content">
+                <h2 style="color: #f7257c;"> Need a help? Let's talk. </h2>
+                <h4 class="text-dark"> Schedule a meeting for discussion </h4>
+            </div>
+
+            <div class="click-btn ms-md-5 mt-4 mt-md-0">
+                <a href="contact.html"> <button style="border: 2px solid #f7257c;color: #f7257c;"> Click Here </button>
+                </a>
+            </div>
+        </section>
+
+        <!-- Chat Bot Toggle Button -->
+        <div class="chat-toggle" onclick="toggleChat()">
+            <img src="img/Chart-bot-robot.png" alt="robo-img">
+        </div>
+
+        <!-- Chat Bot Box -->
+        <div class="chatbox shadow" id="chatbox">
+            <div class="chat-header text-white px-3 py-3 d-flex justify-content-between align-items-center">
+                <span> Welcome to Hisho & Kanri</span>
+                <!--<button class="btn-close" onclick="toggleChat()"></button>-->
+                <div class="close-chart" onclick="toggleChat()">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+
+            <div class="chat-body p-3" id="chat-body">
+                <!--<div class="chat-message bot">Hi! How can I help you today? 😊 </div>-->
+            </div>
+
+            <div class="chat-footer d-flex">
+                <input type="text" class="form-control" id="chat-input" placeholder="Type a message...">
+                <button class="chart-send-btn" onclick="sendMessage()"> <i class="bi bi-send"></i> </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-box px-2 px-md-5 pt-5 pb-4">
+            <div class="container-fluid text-md-start">
+                <!-- Company Intro Paragraph -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <p> <span style="color: #f7257c; font-size: 20px;font-weight: 600;"> Hisho & Kanri Pvt Ltd
+                            </span> offers expert financial, accounting, and compliance services across
+                            India,
+                            Singapore, and Malaysia. We help businesses stay compliant and financially sound.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Footer Sections -->
+                <div class="row">
+                    <!-- Accounting Services -->
+                    <div class="col-md-2 col-sm-6 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-3">Accounting Services</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">Bookkeeping</a></li>
+                            <li><a href="#" class="text-decoration-none">Tax Filing</a></li>
+                            <li><a href="#" class="text-decoration-none">Payroll</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Compliance Management -->
+                    <div class="col-md-2 col-sm-6 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-3">Compliance Management</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">GST Filing</a></li>
+                            <li><a href="#" class="text-decoration-none">ROC Compliance</a></li>
+                            <li><a href="#" class="text-decoration-none">Audit Support</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Business Setup -->
+                    <div class="col-md-2 col-sm-6 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-3">Business Setup</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="" class="text-decoration-none">Company Registration</a></li>
+                            <li><a href="#" class="text-decoration-none">Startup Advisory</a></li>
+                            <li><a href="#" class="text-decoration-none">Legal Structure</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-md-2 col-sm-6 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-3">Quick Links</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="home.html" class="text-decoration-none">Home</a></li>
+                            <li><a href="about.html" class="text-decoration-none">About Us</a></li>
+                            <li><a href="careers.html" class="text-decoration-none">Careers</a></li>
+                            <li><a href="contact.html" class="text-decoration-none">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Invest India -->
+                    <div class="col-md-2 col-sm-6 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-3">Invest India</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">Why India</a></li>
+                            <li><a href="#" class="text-decoration-none">Foreign Investment</a></li>
+                            <li><a href="#" class="text-decoration-none">Incentives</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Head Office -->
+                    <div class="col-md-2 col-sm-6 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-3">Head Office</h6>
+                        <p class="mb-1">Hisho & Kanri Pvt Ltd</p>
+                        <p class="mb-1"> Thanjavur, India </p>
+                        <p class="mb-1"><i class="bi bi-telephone-fill pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> +91
+                            8300693517 </p>
+                        <p class="mb-1"><i class="fa-solid fa-headphones  pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> +91 4362
+                            240009 </p>
+                        <p class="mb-0"><i class="bi bi-envelope-fill pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i>
+                            admin@hiskan.com </p>
+                    </div>
+
+                    <p class="footer-line"></p>
+
+                    <!--Copy rights-->
+                    <div class="footer-bottom row px-3 px-md-5 py-3">
+
+                        <p class="col-12 col-lg-4 col-md-6"> <i class="fa-regular fa-copyright pe-2"
+                                style="font-size: 15px;"></i> 2025 Hisho & Kanri Pvt Ltd. All Rights Reserved.</p>
+
+                        <div class="footer-links col-12 col-lg-4 col-md-6">
+                            <a href="legal.html" class="pe-3"> Legal </a>
+                            <a href="#" class="pe-3"> Privacy </a>
+                            <a href="accessibility.html" class="pe-3"> Accessibility </a>
+                            <a href="#" class="pe-3"> Help </a>
+                        </div>
+
+                        <div class="footer-social-links mt-3 mt-md-0 col-12 col-lg-4 col-md-6">
+                            <a href="https://www.instagram.com/hisho_kanri/"> <i class="fa-brands fa-instagram"
+                                    id="instagram"></i> </a>
+                            <a href="https://www.facebook.com/profile.php?id=61574683414836"> <i
+                                    class="fa-brands fa-facebook-f" id="facebook"></i> </a>
+                            <a href="https://www.linkedin.com/in/hisho-kanri/"> <i class="fa-brands fa-linkedin-in"
+                                    id="inkedin"></i> </a>
+                            <a href="https://x.com/HishoK47102"> <i class="fa-brands fa-x-twitter" id="twitter"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@HISHOKANRI"> <i class="fa-brands fa-youtube"
+                                    id="youtube"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"> </script>
+</body>
+
+</html>

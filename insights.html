@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> News&Insights </title>
+
+    <!--My css-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/company logo icon.png" type="image/png">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        .fade-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- NavBar -->
+    <nav id="Navbar" class="navbar px-3 px-md-5 py-md-1">
+        <div class="website-name text-white">
+            <img src="img/company logo icon.png" alt="">
+            <h2 class="logo-style ps-2"> <span style="color: rgb(75, 3, 109)">Hisho </span> & Kanri </h2>
+        </div>
+
+        <div class="navbar-menu pe-5">
+            <ul class="navbar-menu-links text-white">
+                <a href="home.html">
+                    <li> Home </li>
+                </a>
+
+                <a href="about.html">
+                    <li> About US</li>
+                </a>
+
+                <a href="#" class="dropdown-service">
+                    <li id="serviceToggle"> Service </li>
+                </a>
+
+                <a href="insights.html">
+                    <li> News & insights </li>
+                </a>
+
+                <a href="careers.html">
+                    <li> Careers </li>
+                </a>
+
+                <a href="contact.html">
+                    <li> Contact </li>
+                </a>
+            </ul>
+
+            <div class="login-btn ms-4">
+                <a href="login.html"> <button> <i class="fa-solid fa-right-to-bracket"></i> Login </button> </a>
+            </div>
+        </div>
+
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+            <i class="bi bi-list"></i>
+        </div>
+    </nav>
+
+    <!--Side Navbar-->
+    <aside class="side-navbar">
+        <p class="cross-symbol" onclick="closenavbar()"> <i class="fa fa-times" aria-hidden="true"></i> </p>
+
+        <img src="img/company-logo.png" alt="">
+
+        <!--
+        <div class="website-name">
+            <h2 class="logo-style" style="font-size: 20px;"> Hisho & Kanri </h2>
+        </div>
+        -->
+
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"> <a href="home.html"> Home </a> </p>
+            <p class="side-navbar-link"> <a href="about.html"> About </a> </p>
+            <p class="side-navbar-link" onclick="toggleTopServiceDropdown()">
+                <a href="#" class="dropdown-service">
+                    <span id="serviceToggle"> Service </span>
+                </a>
+            </p>
+            <p class="side-navbar-link"> <a href="insights.html"> News & insights </a> </p>
+            <p class="side-navbar-link"> <a href="careers.html"> Careers </a> </p>
+            <p class="side-navbar-link"> <a href="contact.html"> Contact </a> </p>
+            <a href="login.html"><button> <i class="fa-solid fa-right-to-bracket"></i> Login </button></a>
+        </div>
+    </aside>
+
+    <main class="insights-main-content">
+        <!-- Service option-->
+        <div class="service-dropdown" id="serviceDropdown">
+            <div class="dropdown-title pb-2">
+                <h5> Select Your Country </h5>
+            </div>
+
+            <a href="IndianService.html" class="service-item d-flex align-items-center">
+                <img src="img/india-flag.jpg" alt="India" class="flag-icon mx-2">
+                <span> India </span>
+            </a>
+
+            <a href="SingaporeService.html" class="service-item d-flex align-items-center">
+                <img src="img/singapore-flag.jpg" alt="Singapore" class="flag-icon mx-2">
+                <span> Singapore </span>
+            </a>
+
+            <a href="MalaysiaService.html" class="service-item d-flex align-items-center">
+                <img src="img/malaysian flag.jpg" alt="Malaysia" class="flag-icon mx-2">
+                <span> Malaysia </span>
+            </a>
+        </div>
+
+        <!--Sidebar service option-->
+        <div id="topServiceDropdown" class="top-service-dropdown">
+            <div class="dropdown-title pb-2">
+                <h5> Select Your Country </h5>
+            </div>
+
+            <a href="IndianService.html" class="service-item d-flex align-items-center">
+                <img src="img/india-flag.jpg" alt="India" class="flag-icon mx-2">
+                <span> India </span>
+            </a>
+
+            <a href="SingaporeService.html" class="service-item d-flex align-items-center">
+                <img src="img/singapore-flag.jpg" alt="Singapore" class="flag-icon mx-2">
+                <span> Singapore </span>
+            </a>
+
+            <a href="MalaysiaService.html" class="service-item d-flex align-items-center">
+                <img src="img/malaysian flag.jpg" alt="Malaysia" class="flag-icon mx-2">
+                <span> Malaysia </span>
+            </a>
+        </div>
+
+        <section class="insights-section py-5 px-md-5 px-3">
+            <div class="insights-title">
+                <h4 class="text-center"> Explore our latest insights, updates, and expert opinions on financial
+                    strategy, tax
+                    regulations, and corporate compliance. Stay informed to stay ahead in your business journey.
+                </h4>
+            </div>
+
+            <div class="row">
+                <!-- Left Column -->
+                <div class="col-lg-9">
+                    <div class="recent-blog">
+                        <div class="row py-2 py-md-5 px-2">
+                            <div class="blog-card col-12 col-sm-6 col-md-4">
+                                <div class="card">
+                                    <img class="img-fluid rounded" src="img/blogs-img1.png" alt="">
+                                    <div class="card-body py-4">
+                                        <div class="blog-title">Navigating Global Compliance: Singapore, Malaysia,
+                                            and
+                                            India</div>
+                                        <div class="blog-date">Published on: April 5, 2025</div>
+                                        <p>How Hisho & Kanri bridges regulations across regions with expert advice
+                                            on
+                                            transparency and compliance.</p>
+                                        <a href="#" class="read-more">Read More → </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="blog-card col-12 col-sm-6 col-md-4">
+                                <div class="card">
+                                    <img class="img-fluid rounded" src="img/blogs-img2.png" alt="">
+                                    <div class="card-body py-4">
+                                        <div class="blog-title">Tax-Saving Strategies for Startups in 2025</div>
+                                        <div class="blog-date">Published on: March 20, 2025</div>
+                                        <p>Effective tax planning techniques tailored for startups to help save more
+                                            and
+                                            scale faster.</p>
+                                        <a href="#" class="read-more">Read More →</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="blog-card col-12 col-sm-6 col-md-4">
+                                <div class="card">
+                                    <img class="img-fluid rounded" src="img/blogs-img3.png" alt="">
+                                    <div class="card-body py-4">
+                                        <div class="blog-title">Virtual CFO Services – Smarter Financial Decisions
+                                        </div>
+                                        <div class="blog-date">Published on: March 1, 2025</div>
+                                        <p>Explore how our outsourced CFO solution gives your business strategic
+                                            edge
+                                            without full-time costs.</p>
+                                        <a href="#" class="read-more">Read More →</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="blog-card col-12 col-sm-6 col-md-4">
+                                <div class="card">
+                                    <img class="img-fluid rounded" src="img/blogs-img4.png" alt="">
+                                    <div class="card-body py-4">
+                                        <div class="blog-title">Understanding Corporate Tax Filing Deadlines</div>
+                                        <div class="blog-date">Published on: February 10, 2025</div>
+                                        <p>Stay compliant by learning about the latest filing schedules in
+                                            Singapore,
+                                            Malaysia, and India.</p>
+                                        <a href="#" class="read-more">Read More →</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="blog-card col-12 col-sm-6 col-md-4">
+                                <div class="card">
+                                    <img class="img-fluid rounded" src="img/blogs-img5.png" alt="">
+                                    <div class="card-body py-4">
+                                        <div class="blog-title">GST vs SST: What Your Business Needs to Know</div>
+                                        <div class="blog-date">Published on: January 10, 2025</div>
+                                        <p>Compare these regional tax systems and see how they impact operations in
+                                            Malaysia and beyond.</p>
+                                        <a href="#" class="read-more">Read More →</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="blog-card col-12 col-sm-6 col-md-4">
+                                <div class="card">
+                                    <img class="img-fluid rounded" src="img/blogs-img6.png" alt="">
+                                    <div class="card-body py-4">
+                                        <div class="blog-title">Accounting Advisory for Tech Startups</div>
+                                        <div class="blog-date">Published on: December 15, 2024</div>
+                                        <p>Tailored advice for fast-paced industries—what tech founders must track
+                                            from
+                                            day one.</p>
+                                        <a href="#" class="read-more">Read More →</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="blog-card col-12 col-sm-6 col-md-4">
+                                <div class="card">
+                                    <img class="img-fluid rounded" src="img/blogs-img7.png" alt="">
+                                    <div class="card-body py-4">
+                                        <div class="blog-title">Digital Bookkeeping Trends for 2025</div>
+                                        <div class="blog-date">Published on: November 30, 2024</div>
+                                        <p>Stay ahead with automation, AI tools, and cloud-based ledger management.
+                                        </p>
+                                        <a href="#" class="read-more">Read More →</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="blog-card col-12 col-sm-6 col-md-4">
+                                <div class="card">
+                                    <img class="img-fluid rounded" src="img/blogs-img8.jpeg" alt="">
+                                    <div class="card-body py-4">
+                                        <div class="blog-title">Financial Statements: A Beginner’s Guide</div>
+                                        <div class="blog-date">Published on: November 1, 2024</div>
+                                        <p>Understand balance sheets, income statements, and cash flows with our
+                                            easy
+                                            guide.</p>
+                                        <a href="#" class="read-more">Read More →</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="blog-card col-12 col-sm-6 col-md-4">
+                                <div class="card">
+                                    <img class="img-fluid rounded" src="img/blogs-img9.jpeg" alt="">
+                                    <div class="card-body py-4">
+                                        <div class="blog-title">How to Choose the Right Accounting Software</div>
+                                        <div class="blog-date">Published on: January 25, 2025</div>
+                                        <p>Discover the top tools to streamline your business finances efficiently
+                                            and
+                                            affordably.</p>
+                                        <a href="#" class="read-more">Read More →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="col-lg-3 py-3 py-md-5">
+
+                    <div class="search mb-5">
+                        <input type="search" placeholder="Search blog content...">
+                        <i class="fa-solid fa-magnifying-glass pe-3"></i>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="content-title"> Quick Tip: Separate Accounts</div>
+                        <p>Always separate business and personal accounts to avoid confusion during audits and tax
+                            filing.</p>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="content-title"> Virtual CFO Spotlight </div>
+                        <p>Let us handle financial planning, budgeting, and forecasting—get executive-level insights
+                            without the cost of a full-time CFO.</p>
+                        <a href="#" class="read-more">Learn More →</a>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="content-title"> Monthly Compliance Checklist </div>
+                        <ul class="mb-0" style="list-style: none">
+                            <li> GST Filing <span style="color: green;">✔</span> </li>
+                            <li> Payroll Processing <span style="color: green;">✔</span> </li>
+                            <li> Statutory Payments <span style="color: green;">✔</span> </li>
+                            <li> Internal Financial Review <span style="color: green;">✔</span> </li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="content-title"> Trending: Budget 2025 Insights</div>
+                        <p>Here’s how the new policies impact businesses in India and Southeast Asia.</p>
+                        <a href="#" class="read-more">Explore Analysis →</a>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="content-title"> Download: Tax Calendar 2025</div>
+                        <p>Stay on track with all filing deadlines. Grab our free tax calendar now!</p>
+                        <a href="#" class="read-more">Download PDF →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lets Talk -->
+        <section class="lets-talk-box py-5 px-3" style="background-color: rgba(0, 0, 0, 0.4);">
+            <div class="lets-talk-content">
+                <h2 class="text-white" style="text-shadow: 1px 1px 2px #000;"> Need a help? Let's talk. </h2>
+                <h4 class="text-white"> Schedule a meeting for discussion </h4>
+            </div>
+
+            <div class="click-btn ms-md-5 mt-4 mt-md-0">
+                <a href="contact.html"> <button> Click Here </button> </a>
+            </div>
+        </section>
+
+        <!-- Chat Bot Toggle Button -->
+        <div class="chat-toggle" onclick="toggleChat()">
+            <img src="img/Chart-bot-robot.png" alt="robo-img">
+        </div>
+
+        <!-- Chat Bot Box -->
+        <div class="chatbox shadow" id="chatbox">
+            <div class="chat-header text-white px-3 py-3 d-flex justify-content-between align-items-center">
+                <span> Welcome to Hisho & Kanri</span>
+                <!--<button class="btn-close" onclick="toggleChat()"></button>-->
+                <div class="close-chart" onclick="toggleChat()">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+
+            <div class="chat-body p-3" id="chat-body">
+                <!--<div class="chat-message bot">Hi! How can I help you today? 😊 </div>-->
+            </div>
+
+            <div class="chat-footer d-flex">
+                <input type="text" class="form-control" id="chat-input" placeholder="Type a message...">
+                <button class="chart-send-btn" onclick="sendMessage()"> <i class="bi bi-send"></i> </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-box px-2 px-md-5 pt-5 pb-4">
+            <div class="container-fluid text-md-start">
+                <!-- Company Intro Paragraph -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <p> <span style="color: #f7257c; font-size: 20px;font-weight: 600;"> Hisho & Kanri Pvt Ltd
+                            </span> offers expert financial, accounting, and compliance services across
+                            India,
+                            Singapore, and Malaysia. We help businesses stay compliant and financially sound.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Footer Sections -->
+                <div class="row">
+                    <!-- Accounting Services -->
+                    <div class="col-md-2 col-sm-6 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-3">Accounting Services</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">Bookkeeping</a></li>
+                            <li><a href="#" class="text-decoration-none">Tax Filing</a></li>
+                            <li><a href="#" class="text-decoration-none">Payroll</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Compliance Management -->
+                    <div class="col-md-2 col-sm-6 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-3">Compliance Management</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">GST Filing</a></li>
+                            <li><a href="#" class="text-decoration-none">ROC Compliance</a></li>
+                            <li><a href="#" class="text-decoration-none">Audit Support</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Business Setup -->
+                    <div class="col-md-2 col-sm-6 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-3">Business Setup</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="" class="text-decoration-none">Company Registration</a></li>
+                            <li><a href="#" class="text-decoration-none">Startup Advisory</a></li>
+                            <li><a href="#" class="text-decoration-none">Legal Structure</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-md-2 col-sm-6 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-3">Quick Links</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="home.html" class="text-decoration-none">Home</a></li>
+                            <li><a href="about.html" class="text-decoration-none">About Us</a></li>
+                            <li><a href="careers.html" class="text-decoration-none">Careers</a></li>
+                            <li><a href="contact.html" class="text-decoration-none">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Invest India -->
+                    <div class="col-md-2 col-sm-6 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-3">Invest India</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">Why India</a></li>
+                            <li><a href="#" class="text-decoration-none">Foreign Investment</a></li>
+                            <li><a href="#" class="text-decoration-none">Incentives</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Head Office -->
+                    <div class="col-md-2 col-sm-6 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-3">Head Office</h6>
+                        <p class="mb-1">Hisho & Kanri Pvt Ltd</p>
+                        <p class="mb-1"> Thanjavur, India </p>
+                        <p class="mb-1"><i class="bi bi-telephone-fill pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> +91
+                            8300693517 </p>
+                        <p class="mb-1"><i class="fa-solid fa-headphones  pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> +91 4362
+                            240009 </p>
+                        <p class="mb-0"><i class="bi bi-envelope-fill pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i>
+                            admin@hiskan.com </p>
+                    </div>
+
+                    <p class="footer-line"></p>
+
+                    <!--Copy rights-->
+                    <div class="footer-bottom row px-3 px-md-5 py-3">
+
+                        <p class="col-12 col-lg-4 col-md-6"> <i class="fa-regular fa-copyright pe-2"
+                                style="font-size: 15px;"></i> 2025 Hisho & Kanri Pvt Ltd. All Rights Reserved.</p>
+
+                        <div class="footer-links col-12 col-lg-4 col-md-6">
+                            <a href="legal.html" class="pe-3"> Legal </a>
+                            <a href="#" class="pe-3"> Privacy </a>
+                            <a href="accessibility.html" class="pe-3"> Accessibility </a>
+                            <a href="#" class="pe-3"> Help </a>
+                        </div>
+
+                        <div class="footer-social-links mt-3 mt-md-0 col-12 col-lg-4 col-md-6">
+                            <a href="https://www.instagram.com/hisho_kanri/"> <i class="fa-brands fa-instagram"
+                                    id="instagram"></i> </a>
+                            <a href="https://www.facebook.com/profile.php?id=61574683414836"> <i
+                                    class="fa-brands fa-facebook-f" id="facebook"></i> </a>
+                            <a href="https://www.linkedin.com/in/hisho-kanri/"> <i class="fa-brands fa-linkedin-in"
+                                    id="inkedin"></i> </a>
+                            <a href="https://x.com/HishoK47102"> <i class="fa-brands fa-x-twitter" id="twitter"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@HISHOKANRI"> <i class="fa-brands fa-youtube"
+                                    id="youtube"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"> </script>
+</body>
+
+</html>
