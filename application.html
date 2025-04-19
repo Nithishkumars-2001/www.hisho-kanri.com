@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Job Application </title>
+    <link rel="icon" href="img/company logo icon.png" type="image/png">
+
+    <!--My css-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<body style="background-color:aliceblue;">
+
+    <!-- NavBar -->
+    <nav id="Navbar" class="navbar px-3 px-md-5 py-md-1">
+        <div class="website-name text-white">
+            <img src="img/company logo icon.png" alt="">
+            <h2 class="logo-style ps-2"> <span style="color: rgb(75, 3, 109)">Hisho </span> & Kanri </h2>
+        </div>
+
+        <div class="navbar-menu pe-5">
+            <ul class="navbar-menu-links text-white">
+                <a href="home.html">
+                    <li> Home </li>
+                </a>
+
+                <a href="about.html">
+                    <li> About US</li>
+                </a>
+
+                <a href="#" class="dropdown-service">
+                    <li id="serviceToggle"> Service </li>
+                </a>
+
+                <a href="insights.html">
+                    <li> News & insights </li>
+                </a>
+
+                <a href="careers.html">
+                    <li> Careers </li>
+                </a>
+
+                <a href="contact.html">
+                    <li> Contact </li>
+                </a>
+            </ul>
+
+            <div class="login-btn ms-4">
+                <a href="login.html"> <button> <i class="fa-solid fa-right-to-bracket"></i> Login </button> </a>
+            </div>
+        </div>
+
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+            <i class="bi bi-list"></i>
+        </div>
+    </nav>
+
+    <!--Side Navbar-->
+    <aside class="side-navbar">
+        <p class="cross-symbol" onclick="closenavbar()"> <i class="fa fa-times" aria-hidden="true"></i> </p>
+
+        <img src="img/company-logo.png" alt="">
+
+        <!--
+        <div class="website-name">
+            <h2 class="logo-style" style="font-size: 20px;"> Hisho & Kanri </h2>
+        </div>
+        -->
+
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"> <a href="home.html"> Home </a> </p>
+            <p class="side-navbar-link"> <a href="about.html"> About </a> </p>
+            <p class="side-navbar-link" onclick="toggleTopServiceDropdown()">
+                <a href="#" class="dropdown-service">
+                    <span id="serviceToggle"> Service </span>
+                </a>
+            </p>
+            <p class="side-navbar-link"> <a href="insights.html"> News & insights </a> </p>
+            <p class="side-navbar-link"> <a href="careers.html"> Careers </a> </p>
+            <p class="side-navbar-link"> <a href="contact.html"> Contact </a> </p>
+            <a href="login.html"><button> <i class="fa-solid fa-right-to-bracket"></i> Login </button></a>
+        </div>
+    </aside>
+
+    <main class="application-main-content">
+        <!-- Service option-->
+        <div class="service-dropdown" id="serviceDropdown">
+            <div class="dropdown-title pb-2">
+                <h5> Select Your Country </h5>
+            </div>
+
+            <a href="IndianService.html" class="service-item d-flex align-items-center">
+                <img src="img/india-flag.jpg" alt="India" class="flag-icon mx-2">
+                <span> India </span>
+            </a>
+
+            <a href="SingaporeService.html" class="service-item d-flex align-items-center">
+                <img src="img/singapore-flag.jpg" alt="Singapore" class="flag-icon mx-2">
+                <span> Singapore </span>
+            </a>
+
+            <a href="MalaysiaService.html" class="service-item d-flex align-items-center">
+                <img src="img/malaysian flag.jpg" alt="Malaysia" class="flag-icon mx-2">
+                <span> Malaysia </span>
+            </a>
+        </div>
+
+        <!--Sidebar service option-->
+        <div id="topServiceDropdown" class="top-service-dropdown">
+            <div class="dropdown-title pb-2">
+                <h5> Select Your Country </h5>
+            </div>
+
+            <a href="IndianService.html" class="service-item d-flex align-items-center">
+                <img src="img/india-flag.jpg" alt="India" class="flag-icon mx-2">
+                <span> India </span>
+            </a>
+
+            <a href="SingaporeService.html" class="service-item d-flex align-items-center">
+                <img src="img/singapore-flag.jpg" alt="Singapore" class="flag-icon mx-2">
+                <span> Singapore </span>
+            </a>
+
+            <a href="MalaysiaService.html" class="service-item d-flex align-items-center">
+                <img src="img/malaysian flag.jpg" alt="Malaysia" class="flag-icon mx-2">
+                <span> Malaysia </span>
+            </a>
+        </div>
+
+        <!--Responsibility-->
+        <section class="responsibility px-2 px-md-0 py-5">
+            <div class="container">
+                <h3 class="py-3" style="color: #f83e8c">Responsibilities</h3>
+
+                <h5 style="color: #f83e8c;"> <span class="text-dark pe-1">✦</span>
+                    Accountant</h5>
+                <p style="text-align: justify;">
+                    The Accountant will be responsible for maintaining accurate financial records, including journal
+                    entries, ledgers, and reconciliations. They will handle the preparation of monthly, quarterly, and
+                    annual financial reports, and ensure compliance with tax regulations and financial laws. The ideal
+                    candidate should have 2–3 years of relevant experience in accounting or financial management, with
+                    proficiency in tools like Tally or QuickBooks considered an added advantage.
+                </p>
+
+                <h5 style="color: #f83e8c;"> <span class="text-dark pe-1">✦</span> Accounts Executive</h5>
+                <p style="text-align: justify;">
+                    The Accounts Executive will manage day-to-day financial transactions, including accounts receivable
+                    and payable. They will support the preparation of budgets, assist in forecasting financial trends,
+                    and ensure timely billing and payment processing. They will also collaborate with internal teams,
+                    auditors, and vendors to maintain smooth financial operations.
+                </p>
+
+                <h5 style="color: #f83e8c;"> <span class="text-dark pe-1">✦</span> Software Developer</h5>
+                <p style="text-align: justify;">
+                    The Software Developer will be responsible for designing, developing, and testing software
+                    applications based on business needs. They will work closely with product managers and designers to
+                    ensure the software is user-friendly and aligns with the company’s goals. The developer must also
+                    maintain code quality, optimize performance, and stay updated with the latest technologies and best
+                    practices in development.
+                </p>
+
+                <h5 style="color: #f83e8c;"> <span class="text-dark pe-1">✦</span> Communication Executive</h5>
+                <p style="text-align: justify;">
+                    The Communication Executive will plan and execute both internal and external communication
+                    strategies to enhance brand presence. They will create engaging content for newsletters, social
+                    media, and press releases, while also coordinating with different departments to ensure consistent
+                    messaging. Strong communication skills and the ability to handle public relations activities are
+                    essential for this role.
+                </p>
+            </div>
+        </section>
+
+        <!-- Application Process -->
+        <section class="application py-3">
+            <div class="container">
+
+                <h2 class="text-center py-4" style="color: #f83e8c;"> Application Process </h2>
+
+                <form action="" method="">
+                    <!-- Name -->
+                    <div class="form-group mb-3">
+                        <label for="Name" class="form-label text-white">Name<span
+                                class="text-danger ps-1">*</span></label>
+                        <input type="text" class="form-control" id="Name" name="Name" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group mb-3">
+                        <label for="email" class="form-label text-white">Email<span
+                                class="text-danger ps-1">*</span></label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="form-group mb-3">
+                        <label for="Phone" class="form-label text-white">Phone<span
+                                class="text-danger ps-1">*</span></label>
+                        <input type="number" class="form-control" id="phone" name="phone" required>
+                    </div>
+
+                    <!-- DOB -->
+                    <div class="form-group mb-3">
+                        <label for="dob" class="form-label text-white">DOB<span
+                                class="text-danger ps-1">*</span></label>
+                        <input type="date" class="form-control" id="dob" name="dob" required>
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="form-group mb-3">
+                        <label for="gender" class="form-label text-white">Gender<span
+                                class="text-danger ps-1">*</span></label>
+                        <input type="text" class="form-control" id="gender" name="gender" required>
+                    </div>
+
+                    <!-- Designation -->
+                    <div class="form-group mb-3">
+                        <label for="designation" class="form-label text-white"> Designation <span
+                                class="text-danger ps-1">*</span></label>
+                        <input type="text" class="form-control" id="designation" name="designation" required>
+                    </div>
+
+                    <!-- Country -->
+                    <div class="form-group mb-3">
+                        <label for="country" class="form-label text-white">Country<span
+                                class="text-danger ps-1">*</span></label>
+                        <input type="text" class="form-control" id="country" name="country" required>
+                    </div>
+
+                    <!-- Current City -->
+                    <div class="form-group mb-3">
+                        <label for="city" class="form-label text-white">Current City<span
+                                class="text-danger ps-1">*</span></label>
+                        <input type="text" class="form-control" id="city" name="city" required>
+                    </div>
+
+                    <!-- Resume 
+                    <div class="form-group mb-3">
+                        <label for="country" class="form-label text-white">Resume<span class="text-danger ps-1">*</span></label>
+                        <input type="file" class="form-control" id="Resume" name="Resume" required>
+                    </div>-->
+
+                    <!-- Social Link -->
+                    <div class="form-group mb-3">
+                        <label for="sociallink" class="form-label text-white">Social link<span
+                                class="text-danger ps-1">*</span></label>
+                        <input type="text" class="form-control" id="sociallink" name="sociallink" required>
+                    </div>
+
+                    <!-- Current Employment Status -->
+                    <div class="form-group mb-3">
+                        <label for="employmentstatus" class="form-label text-white">Current Employment Status<span
+                                class="text-danger ps-1">*</span></label>
+                        <input type="text" class="form-control" id="employmentstatus" name="employmentstatus" required>
+                    </div>
+
+                    <!-- Work Sample Links -->
+                    <div class="form-group mb-3">
+                        <label for="worksamplelinks" class="form-label text-white">Work Sample Links<span
+                                class="text-danger ps-1">*</span></label>
+                        <input type="text" class="form-control" id="worksamplelinks" name="worksamplelinks" required>
+                    </div>
+
+                    <div class="form-group pt-4">
+                        <label for="Resume" class="form-label text-white">Resume<span
+                                class="text-danger ps-1">*</span></label>
+                        <div class="custom-file-upload">
+                            <label for="Resume" class="upload-btn">Choose File</label>
+                            <span id="file-name" class="text-white">No file chosen</span>
+                            <input type="file" id="Resume" name="Resume" required>
+                        </div>
+                    </div>
+
+                    <!-- Register Button -->
+                    <button type="submit" class="apply-btn my-4" value="apply" name="apply"> Apply </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Chat Bot Toggle Button -->
+        <div class="chat-toggle" onclick="toggleChat()">
+            <img src="img/Chart-bot-robot.png" alt="robo-img">
+        </div>
+
+        <!-- Chat Bot Box -->
+        <div class="chatbox shadow" id="chatbox">
+            <div class="chat-header text-white px-3 py-3 d-flex justify-content-between align-items-center">
+                <span> Welcome to Hisho & Kanri</span>
+                <!--<button class="btn-close" onclick="toggleChat()"></button>-->
+                <div class="close-chart" onclick="toggleChat()">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+
+            <div class="chat-body p-3" id="chat-body">
+                <!--<div class="chat-message bot">Hi! How can I help you today? 😊 </div>-->
+            </div>
+
+            <div class="chat-footer d-flex">
+                <input type="text" class="form-control" id="chat-input" placeholder="Type a message...">
+                <button class="chart-send-btn" onclick="sendMessage()"> <i class="bi bi-send"></i> </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-box px-2 px-md-5 pt-5 pb-4">
+            <div class="container-fluid text-md-start">
+
+                <!-- Company Intro Paragraph -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <p class="text-center"> <span style="color: #f7257c; font-size: 23px;font-weight: 600;"> Hisho &
+                                Kanri
+                            </span> offers expert financial, accounting, and compliance services across
+                            India,
+                            Singapore, and Malaysia. We help businesses stay compliant and financially sound.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <!-- Quick Links -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up">
+                        <h6 class="text-uppercase fw-bold mb-3">Quick Links</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="home.html" class="text-decoration-none">Home</a></li>
+                            <li><a href="about.html" class="text-decoration-none">About Us</a></li>
+                            <li><a href="services.html" class="text-decoration-none">Our Services</a></li>
+                            <li><a href="contact.html" class="text-decoration-none">Contact</a></li>
+                            <li><a href="careers.html" class="text-decoration-none">Careers</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Company Resources -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <h6 class="text-uppercase fw-bold mb-3">Company Resources</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="insights.html" class="text-decoration-none">Insights & Blogs</a></li>
+                            <li><a href="help.html" class="text-decoration-none">FAQs</a></li>
+                            <li><a href="privacy.html" class="text-decoration-none">Privacy Policy</a></li>
+                            <li><a href="privacy.html" class="text-decoration-none">Terms & Conditions</a></li>
+                            <li><a href="#" class="text-decoration-none">Support</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Global Presence -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <h6 class="text-uppercase fw-bold mb-3">Global Presence</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="india.html" class="text-decoration-none">India Office</a></li>
+                            <li><a href="singapore.html" class="text-decoration-none">Singapore Office</a></li>
+                            <li><a href="malaysia.html" class="text-decoration-none">Malaysia Office</a></li>
+                            <li><a href="#" class="text-decoration-none">Future Locations</a></li>
+                            <li><a href="#" class="text-decoration-none">Partnerships</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Products -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="600">
+                        <h6 class="text-uppercase fw-bold mb-3">Our Products</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">Accounting Software</a></li>
+                            <li><a href="#" class="text-decoration-none">Tax Automation Tool</a></li>
+                            <li><a href="#" class="text-decoration-none">Payroll Management System</a></li>
+                            <li><a href="#" class="text-decoration-none">Compliance Tracker</a></li>
+                            <li><a href="#" class="text-decoration-none">CRM Tools</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Accounting Services -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up">
+                        <h6 class="text-uppercase fw-bold mb-3">Accounting Services</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">Bookkeeping</a></li>
+                            <li><a href="#" class="text-decoration-none">Tax Filing</a></li>
+                            <li><a href="#" class="text-decoration-none">Payroll</a></li>
+                            <li><a href="#" class="text-decoration-none">Bank Reconciliation</a></li>
+                            <li><a href="#" class="text-decoration-none">Invoice Management</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Compliance Management -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <h6 class="text-uppercase fw-bold mb-3">Compliance Management</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">GST Filing</a></li>
+                            <li><a href="#" class="text-decoration-none">ROC Compliance</a></li>
+                            <li><a href="#" class="text-decoration-none">Audit Support</a></li>
+                            <li><a href="#" class="text-decoration-none">Statutory Registrations</a></li>
+                            <li><a href="#" class="text-decoration-none">Compliance Calendar</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Business Setup -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <h6 class="text-uppercase fw-bold mb-3">Business Setup</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="register.html" class="text-decoration-none">Company Registration</a></li>
+                            <li><a href="#" class="text-decoration-none">Startup Advisory</a></li>
+                            <li><a href="legal.html" class="text-decoration-none">Legal Structure</a></li>
+                            <li><a href="#" class="text-decoration-none">LLP Formation</a></li>
+                            <li><a href="#" class="text-decoration-none">Business Name Search</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- India Contact -->
+                    <div class="county-contact col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <h6 class="text-uppercase fw-bold mb-3">India</h6>
+                        <p class="mb-1">Hisho & Kanri Pvt Ltd</p>
+                        <p class="mb-1"> Thanjavur, India </p>
+
+                        <p class="mb-1"><i class="bi bi-telephone-fill pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> +91
+                            8300693517 </p>
+                        <p class="mb-1"><i class="fa-solid fa-headphones  pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> +91 4362
+                            240009 </p>
+                        <p class="mb-0"><i class="bi bi-envelope-fill pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i>
+                            admin@hiskan.com </p>
+                    </div>
+
+                    <!-- Singapore Contact -->
+                    <div class="county-contact col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up"
+                        data-aos-delay="400">
+                        <h6 class="text-uppercase fw-bold mb-3">Singapore</h6>
+                        <p class="mb-1">Hisho & Kanri</p>
+                        <p class="mb-1">Raffles Place, Downtown</p>
+
+                        <p class="mb-1"><i class="bi bi-telephone-fill pe-3 pb-2"
+                                style="color:#f7257c;text-shadow:1px 1px 2px #000;"></i> +65 XXXX XXXX </p>
+                        <p class="mb-1"><i class="fa-solid fa-headphones  pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> +91 XXXX XXXXXX </p>
+                        <p class="mb-0"><i class="bi bi-envelope-fill pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> sg@hiskan.com </p>
+                    </div>
+
+                    <!-- Malaysia Contact -->
+                    <div class="county-contact col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up"
+                        data-aos-delay="500">
+                        <h6 class="text-uppercase fw-bold mb-3">Malaysia</h6>
+                        <p class="mb-1">Hisho & Kanri</p>
+                        <p class="mb-1">Kuala Lumpur City Centre</p>
+
+                        <p class="mb-1"><i class="bi bi-telephone-fill pe-3 pb-2"
+                                style="color:#f7257c;text-shadow:1px 1px 2px #000;"></i> +60 XXXX XXXX </p>
+                        <p class="mb-1"><i class="fa-solid fa-headphones  pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> +91 XXXX XXXXXX </p>
+                        <p class="mb-0"><i class="bi bi-envelope-fill pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> my@hiskan.com </p>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="col-12 col-md-8 col-lg-4 footer-newsletter mb-4" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <h6 class="text-uppercase fw-bold mb-3">Subscribe to Our Newsletter</h6>
+                        <p class="small" style="color: rgb(182, 180, 180);">Get the latest updates, insights, and
+                            regulatory alerts straight to your inbox.</p>
+                        <form>
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+
+                    <!-- Footer Bottom -->
+                    <p class="footer-line"></p>
+                    <div class="footer-bottom row px-3 px-md-5 py-3" data-aos="fade-up">
+                        <p class="col-12 col-sm-6 col-md-6 col-lg-4">
+                            <i class="fa-regular fa-copyright pe-2"></i>
+                            2025 Hisho & Kanri Pvt Ltd. All Rights Reserved.
+                        </p>
+
+                        <div class="footer-links col-12 col-sm-6 col-md-6 col-lg-4">
+                            <a href="legal.html" class="pe-3">Legal</a>
+                            <a href="privacy.html" class="pe-3">Privacy</a>
+                            <a href="accessibility.html" class="pe-3">Accessibility</a>
+                            <a href="help.html" class="pe-3">Help</a>
+                        </div>
+
+                        <div class="footer-social-links mt-4 mt-md-0 col-12 col-sm-6 col-md-6 col-lg-4">
+                            <a href="https://www.instagram.com/hisho_kanri/"> <i class="fa-brands fa-instagram"
+                                    id="instagram"></i> </a>
+                            <a href="https://www.facebook.com/profile.php?id=61574683414836"> <i
+                                    class="fa-brands fa-facebook-f" id="facebook"></i> </a>
+                            <a href="https://www.linkedin.com/in/hisho-kanri/"> <i class="fa-brands fa-linkedin-in"
+                                    id="inkedin"></i> </a>
+                            <a href="https://x.com/HishoK47102"> <i class="fa-brands fa-x-twitter" id="twitter"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@HISHOKANRI"> <i class="fa-brands fa-youtube"
+                                    id="youtube"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"> </script>
+    <script>
+        const fileInput = document.getElementById("Resume");
+        const fileName = document.getElementById("file-name");
+
+        fileInput.addEventListener("change", function () {
+            fileName.textContent = this.files.length > 0 ? this.files[0].name : "No file chosen";
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"> </script>
+</body>
+
+</html>

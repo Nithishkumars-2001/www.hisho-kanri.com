@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Hisho & Kanri </title>
+
+    <!--My css-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/company logo icon.png" type="image/png">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        /* Header */
+        header {
+            width: 100%;
+            height: 80vh;
+            display: grid;
+            place-items: center;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        video {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 80vh;
+            z-index: -1;
+            overflow: hidden;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .header-body h1 {
+            color: rgb(247, 37, 124);
+            text-shadow: 1px 1px 2px #000;
+            font-size: 50px;
+        }
+
+        .header-body h5 {
+            color: #fff;
+            padding-top: 10px;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        .header-body button {
+            margin-top: 50px;
+            border: 2px solid #f7257c;
+            padding: 8px 30px;
+            border-radius: 10px;
+            background-color: transparent;
+            color: #fff;
+            font-weight: 500;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        .header-body button:hover {
+            border: 2px solid #fff;
+            color: #f7257c;
+        }
+
+        /* Merdia Queries */
+
+        @media screen and (max-width: 1260px) {
+            .header-body .container h1 {
+                font-size: 30px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            header {
+                height: auto;
+            }
+
+            video {
+                height: 100%;
+            }
+
+            .header-body button {
+                margin-top: 20px;
+            }
+        }
+    </style>
+
+</head>
+
+<body style="background-color:aliceblue;">
+
+    <!-- NavBar -->
+    <nav id="Navbar" class="navbar px-3 px-md-5 py-md-1">
+        <div class="website-name text-white">
+            <img src="img/company logo icon.png" alt="">
+            <h2 class="logo-style ps-2"> <span style="color: rgb(75, 3, 109)">Hisho </span> & Kanri </h2>
+        </div>
+
+        <div class="navbar-menu pe-5">
+            <ul class="navbar-menu-links text-white">
+                <a href="home.html">
+                    <li> Home </li>
+                </a>
+
+                <a href="about.html">
+                    <li> About US</li>
+                </a>
+
+                <a href="MalaysiaService.html">
+                    <li> Service </li>
+                </a>
+
+                <a href="insights.html">
+                    <li> News & insights </li>
+                </a>
+
+                <a href="careers.html">
+                    <li> Careers </li>
+                </a>
+
+                <a href="contact.html">
+                    <li> Contact </li>
+                </a>
+            </ul>
+
+            <div class="login-btn ms-4">
+                <a href="login.html"> <button> <i class="fa-solid fa-right-to-bracket"></i> Login </button> </a>
+            </div>
+        </div>
+
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+            <i class="bi bi-list"></i>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header-body text-white text-center py-5">
+        <video autoplay loop muted plays-inline id="bg-clip">
+            <source src="video/malaysia header.mp4" type="video/mp4">
+        </video>
+
+        <div class="container py-5">
+            <h5 class="fs-5 fst-italic text-light mb-3 mb-md-5 px-4">Hai! Selamat Datang ke laman Malaysia kami 🇲🇾
+            </h5>
+
+            <h1 class="pt-3 pt-md-0">Your Trusted Partner in Accounting, Taxation & Compliance</h1>
+
+            <h5 class="px-3"> Reliable accounting & tax support tailored for Malaysian businesses </h5>
+
+            <a href="#contact"> <button> Get a Free Consultation </button> </a>
+        </div>
+    </header>
+
+    <!--Side Navbar-->
+    <aside class="side-navbar">
+        <p class="cross-symbol" onclick="closenavbar()"> <i class="fa fa-times" aria-hidden="true"></i> </p>
+
+        <img src="img/company-logo.png" alt="">
+
+        <!--
+        <div class="website-name">
+            <h2 class="logo-style" style="font-size: 20px;"> Hisho & Kanri </h2>
+        </div>
+        -->
+
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"> <a href="home.html"> Home </a> </p>
+            <p class="side-navbar-link"> <a href="about.html"> About </a> </p>
+            <p class="side-navbar-link"> <a href="service.html"> Service </a> </p>
+            <p class="side-navbar-link"> <a href="insights.html"> News & insights </a> </p>
+            <p class="side-navbar-link"> <a href="careers.html"> Careers </a> </p>
+            <p class="side-navbar-link"> <a href="contact.html"> Contact </a> </p>
+            <a href="login.html"><button> <i class="fa-solid fa-right-to-bracket"></i> Login </button></a>
+        </div>
+    </aside>
+
+    <main class="home-main-content">
+        <!-- Benefits -->
+        <section class="benefits py-5">
+            <div class="container">
+                <div class="row">
+                    <h2 class="text-center"> Benefits </h2>
+                    <h4 class="text-center py-4">Why Join Us</h4>
+
+                    <div class="text-box col-12 col-sm-6 col-md-4">
+                        <h5>Global Presence <i class="fa-solid fa-check"></i></h5>
+                        <p>Opportunity to work with clients and teams across Singapore, Malaysia, and India.</p>
+                    </div>
+
+                    <div class="text-box col-12 col-sm-6 col-md-4">
+                        <h5>Professional Growth <i class="fa-solid fa-check"></i></h5>
+                        <p>Continuous exposure to management, accounting, and compliance challenges that help you grow
+                            your expertise.</p>
+                    </div>
+
+                    <div class="text-box col-12 col-sm-6 col-md-4">
+                        <h5>Collaborative Environment <i class="fa-solid fa-check"></i></h5>
+                        <p>Work with a detail-oriented and passionate team that supports learning and growth.</p>
+                    </div>
+
+                    <div class="text-box col-12 col-sm-6 col-md-4">
+                        <h5>Learning Culture <i class="fa-solid fa-check"></i></h5>
+                        <p>Stay updated with the latest financial regulations, software tools, and industry best
+                            practices.</p>
+                    </div>
+
+                    <div class="text-box col-12 col-sm-6 col-md-4">
+                        <h5>Structured Career Path <i class="fa-solid fa-check"></i></h5>
+                        <p>Clear opportunities for advancement based on performance and contribution to the company.</p>
+                    </div>
+
+                    <div class="text-box col-12 col-sm-6 col-md-4">
+                        <h5>Impactful Work <i class="fa-solid fa-check"></i></h5>
+                        <p>Be a part of delivering financial clarity and compliance to businesses across multiple
+                            industries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Time Line-->
+        <section class="service-time-line py-5">
+            <h2 class="text-center" style="color: #f7257c;">Our Professional Services in Malaysia</h2>
+            <p class="text-center mb-5 text-white px-2" style="max-width: 800px; margin: 0 auto; text-align: justify;">
+                From our humble beginnings to becoming a trusted service provider, this timeline reflects our commitment
+                to excellence, client success, and continuous growth in Malaysia’s dynamic business environment.
+            </p>
+
+            <div class="timeline py-5">
+
+                <!-- Service 1 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h5 class="text-center"> Audit Services </h5>
+                        <p>Our audit services in Malaysia ensure that your financial statements are accurate,
+                            transparent, and compliant with local regulations, helping your business maintain integrity,
+                            build trust, and ensure long-term sustainable growth in the market.
+                        </p>
+                        <a href="#"> Read More </a>
+                    </div>
+                </div>
+
+                <!--  Service 2 -->
+                <div class="timeline-item even-timeline-item right">
+                    <div class="timeline-content">
+                        <h5 class="text-center"> Accounting Services </h5>
+                        <p> We offer comprehensive accounting services in Malaysia, assisting businesses with
+                            maintaining accurate records, ensuring compliance with tax regulations, and optimizing
+                            financial reporting to improve transparency, reduce risk, and facilitate informed business
+                            decision-making. </p>
+                        <a href="#"> Read More </a>
+                    </div>
+                </div>
+
+                <!--  Service 3 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h5> Payroll Services </h5>
+                        <p>Our payroll services in Malaysia ensure accurate and timely processing of employee salaries,
+                            guaranteeing compliance with local labor laws and minimizing errors, providing smooth
+                            payroll management while enhancing employee satisfaction and operational efficiency.
+                        </p>
+                        <a href="#"> Read More </a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="timeline-item even-timeline-item right">
+                    <div class="timeline-content">
+                        <h5> Compliance Management </h5>
+                        <p> We provide compliance management services in Malaysia, helping businesses navigate
+                            regulatory frameworks, ensuring accurate reporting, timely tax filings, and adherence to
+                            legal obligations, safeguarding businesses from penalties while ensuring smooth operations.
+                        </p>
+                        <a href="#"> Read More </a>
+                    </div>
+                </div>
+
+                <!--  Service 5 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h5> Business Setup </h5>
+                        <p> Our business setup services in Malaysia guide entrepreneurs through the legalities, company
+                            registration, licensing, and compliance procedures, ensuring a seamless process for
+                            establishing a business and ensuring adherence to local business laws.</p>
+                        <a href="#"> Read More </a>
+                    </div>
+                </div>
+
+                <!--  Service 6 -->
+                <div class="timeline-item even-timeline-item right">
+                    <div class="timeline-content">
+                        <h5> FEMA </h5>
+                        <p> We assist businesses in Malaysia with FEMA (Foreign Exchange Management Act) compliance,
+                            ensuring smooth management of foreign transactions and investments, and ensuring adherence
+                            to local foreign exchange laws for international business operations. </p>
+                        <a href="#"> Read More </a>
+                    </div>
+                </div>
+
+                <!--  Service 7 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h5> Invest in Malaysia </h5>
+                        <p> We support international investors interested in Malaysia’s vibrant market, offering expert
+                            guidance on legal requirements, business opportunities, tax regulations, and compliance,
+                            ensuring a smooth and successful investment process in Malaysia’s economy. </p>
+                        <a href="#"> Read More </a>
+                    </div>
+                </div>
+
+                <!--  Service 8 -->
+                <div class="timeline-item even-timeline-item right">
+                    <div class="timeline-content">
+                        <h5> Company Secretary Service </h5>
+                        <p> Our company secretary services in Malaysia help businesses ensure compliance with corporate
+                            governance laws, manage statutory filings, meet regulatory obligations, and provide expert
+                            advice, allowing your company to operate smoothly and legally in the market. </p>
+                        <a href="#"> Read More </a>
+                    </div>
+                </div>
+
+                <!--  Service 9 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h5> Accounting Advisory and Vertual CFO </h5>
+                        <p> We offer accounting advisory and virtual CFO services in Malaysia, providing strategic
+                            financial insights and guidance to help businesses optimize their financial management,
+                            streamline operations, and enhance profitability while ensuring tax compliance. </p>
+                        <a href="#"> Read More </a>
+                    </div>
+                </div>
+
+                <!--  Service 10 -->
+                <div class="timeline-item even-timeline-item right">
+                    <div class="timeline-content">
+                        <h5> Digital Service </h5>
+                        <p> Our digital services in Malaysia assist businesses with digital transformation, leveraging
+                            technology to streamline operations, enhance data analytics, and automate processes,
+                            ensuring efficiency, innovation, and success in an increasingly digital business
+                            environment. </p>
+                        <a href="#"> Read More </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="aboutus-box py-2">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Image Column -->
+                    <div class="col-12 col-md-6 mb-4 mb-md-0">
+                        <div class="aboutus-img-box p-3">
+                            <div class="faqimg1"></div>
+                            <div class="faqimg2"></div>
+                        </div>
+                    </div>
+
+                    <!-- Text Column -->
+                    <div class="col-12 col-md-6 px-3">
+
+                        <div class="faq-section">
+                            <div class="home-faq-content">
+                                <div class="aboutus-title">
+                                    <h5 class="px-md-4" style="color: rgb(247, 37, 124);"> FAQ </h5>
+                                    <div class="line me-2"> </div>
+                                </div>
+
+                                <h3 class="pt-2"> <span>F</span>requently <span>A</span>sks <span>Q</span>estions </h3>
+
+                                <p>We’ve put together some answers to common business queries, designed to guide you
+                                    through your financial decisions with clarity and confidence.</p>
+                            </div>
+
+                            <div class="accordion" id="faqAccordion">
+                                <!-- Q1 - ACTIVE -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true">
+                                            How To Fix A Problem?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Identify the core issue through financial review and audit.</li>
+                                                <li>Engage our advisory team for a custom compliance roadmap.</li>
+                                                <li>Implement process improvements using automation tools.</li>
+                                                <li>Monitor progress with our performance tracking systems.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Q2 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                            How To Manage Your Business Loans?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Evaluate current loan terms and interest rates.</li>
+                                                <li>Restructure debt for optimized repayment schedules.</li>
+                                                <li>Ensure timely repayments via automated alerts.</li>
+                                                <li>Consult our financial experts for risk mitigation.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Q3 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                            How To Grow Your Investments Funds?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Diversify investments based on risk profile and goals.</li>
+                                                <li>Use data-driven insights for high-return sectors.</li>
+                                                <li>Regular portfolio reviews by certified advisors.</li>
+                                                <li>Tax-efficient investment strategies for long-term growth.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Q4 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFour">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                            What Are Those Requirements For Businesses?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Company registration and legal compliance documentation.</li>
+                                                <li>Regular accounting records and audit readiness.</li>
+                                                <li>Tax filings, GST/VAT registrations as applicable.</li>
+                                                <li>Compliance with local regulations in Singapore, Malaysia, or
+                                                    India.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lets Talk -->
+        <section class="lets-talk-box py-5 px-3"
+            style=" background-color: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px);">
+            <div class="lets-talk-content">
+                <h2 class="text-white" style="text-shadow: 1px 1px 2px #000;"> Need a help? Let's talk. </h2>
+                <h4 class="text-white"> Schedule a meeting for discussion </h4>
+            </div>
+
+            <div class="click-btn ms-md-5 mt-4 mt-md-0">
+                <a href="contact.html"> <button> Click Here </button> </a>
+            </div>
+        </section>
+
+        <!-- Whatsapp icon-->
+        <a href="https://wa.me/60175579931" style="text-decoration: none;">
+            <div class="whatsapp-icon">
+                <img src="img/whatsapp-logo2.png" alt="">
+            </div>
+        </a>
+    </main>
+
+    <footer>
+        <div class="footer-box px-2 px-md-5 pt-5 pb-4">
+            <div class="container-fluid text-md-start">
+
+                <!-- Company Intro Paragraph -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <p class="text-center"> <span style="color: #f7257c; font-size: 23px;font-weight: 600;"> Hisho &
+                                Kanri
+                            </span> offers expert financial, accounting, and compliance services across
+                            India,
+                            Singapore, and Malaysia. We help businesses stay compliant and financially sound.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <!-- Quick Links -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up">
+                        <h6 class="text-uppercase fw-bold mb-3">Quick Links</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="home.html" class="text-decoration-none">Home</a></li>
+                            <li><a href="about.html" class="text-decoration-none">About Us</a></li>
+                            <li><a href="services.html" class="text-decoration-none">Our Services</a></li>
+                            <li><a href="contact.html" class="text-decoration-none">Contact</a></li>
+                            <li><a href="careers.html" class="text-decoration-none">Careers</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Company Resources -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <h6 class="text-uppercase fw-bold mb-3">Company Resources</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="insights.html" class="text-decoration-none">Insights & Blogs</a></li>
+                            <li><a href="help.html" class="text-decoration-none">FAQs</a></li>
+                            <li><a href="privacy.html" class="text-decoration-none">Privacy Policy</a></li>
+                            <li><a href="privacy.html" class="text-decoration-none">Terms & Conditions</a></li>
+                            <li><a href="#" class="text-decoration-none">Support</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Global Presence -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <h6 class="text-uppercase fw-bold mb-3">Global Presence</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="india.html" class="text-decoration-none">India Office</a></li>
+                            <li><a href="singapore.html" class="text-decoration-none">Singapore Office</a></li>
+                            <li><a href="malaysia.html" class="text-decoration-none">Malaysia Office</a></li>
+                            <li><a href="#" class="text-decoration-none">Future Locations</a></li>
+                            <li><a href="#" class="text-decoration-none">Partnerships</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Products -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="600">
+                        <h6 class="text-uppercase fw-bold mb-3">Our Products</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">Accounting Software</a></li>
+                            <li><a href="#" class="text-decoration-none">Tax Automation Tool</a></li>
+                            <li><a href="#" class="text-decoration-none">Payroll Management System</a></li>
+                            <li><a href="#" class="text-decoration-none">Compliance Tracker</a></li>
+                            <li><a href="#" class="text-decoration-none">CRM Tools</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Accounting Services -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up">
+                        <h6 class="text-uppercase fw-bold mb-3">Accounting Services</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">Bookkeeping</a></li>
+                            <li><a href="#" class="text-decoration-none">Tax Filing</a></li>
+                            <li><a href="#" class="text-decoration-none">Payroll</a></li>
+                            <li><a href="#" class="text-decoration-none">Bank Reconciliation</a></li>
+                            <li><a href="#" class="text-decoration-none">Invoice Management</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Compliance Management -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <h6 class="text-uppercase fw-bold mb-3">Compliance Management</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">GST Filing</a></li>
+                            <li><a href="#" class="text-decoration-none">ROC Compliance</a></li>
+                            <li><a href="#" class="text-decoration-none">Audit Support</a></li>
+                            <li><a href="#" class="text-decoration-none">Statutory Registrations</a></li>
+                            <li><a href="#" class="text-decoration-none">Compliance Calendar</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Business Setup -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <h6 class="text-uppercase fw-bold mb-3">Business Setup</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="register.html" class="text-decoration-none">Company Registration</a></li>
+                            <li><a href="#" class="text-decoration-none">Startup Advisory</a></li>
+                            <li><a href="legal.html" class="text-decoration-none">Legal Structure</a></li>
+                            <li><a href="#" class="text-decoration-none">LLP Formation</a></li>
+                            <li><a href="#" class="text-decoration-none">Business Name Search</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- India Contact -->
+                    <div class="county-contact col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <h6 class="text-uppercase fw-bold mb-3">India</h6>
+                        <p class="mb-1">Hisho & Kanri Pvt Ltd</p>
+                        <p class="mb-1"> Thanjavur, India </p>
+
+                        <p class="mb-1"><i class="bi bi-telephone-fill pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> +91
+                            8300693517 </p>
+                        <p class="mb-1"><i class="fa-solid fa-headphones  pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> +91 4362
+                            240009 </p>
+                        <p class="mb-0"><i class="bi bi-envelope-fill pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i>
+                            admin@hiskan.com </p>
+                    </div>
+
+                    <!-- Singapore Contact -->
+                    <div class="county-contact col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up"
+                        data-aos-delay="400">
+                        <h6 class="text-uppercase fw-bold mb-3">Singapore</h6>
+                        <p class="mb-1">Hisho & Kanri</p>
+                        <p class="mb-1">Raffles Place, Downtown</p>
+
+                        <p class="mb-1"><i class="bi bi-telephone-fill pe-3 pb-2"
+                                style="color:#f7257c;text-shadow:1px 1px 2px #000;"></i> +65 XXXX XXXX </p>
+                        <p class="mb-1"><i class="fa-solid fa-headphones  pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> +91 XXXX XXXXXX </p>
+                        <p class="mb-0"><i class="bi bi-envelope-fill pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> sg@hiskan.com </p>
+                    </div>
+
+                    <!-- Malaysia Contact -->
+                    <div class="county-contact col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up"
+                        data-aos-delay="500">
+                        <h6 class="text-uppercase fw-bold mb-3">Malaysia</h6>
+                        <p class="mb-1">Hisho & Kanri</p>
+                        <p class="mb-1">Kuala Lumpur City Centre</p>
+
+                        <p class="mb-1"><i class="bi bi-telephone-fill pe-3 pb-2"
+                                style="color:#f7257c;text-shadow:1px 1px 2px #000;"></i> +60 XXXX XXXX </p>
+                        <p class="mb-1"><i class="fa-solid fa-headphones  pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> +91 XXXX XXXXXX </p>
+                        <p class="mb-0"><i class="bi bi-envelope-fill pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> my@hiskan.com </p>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="col-12 col-md-8 col-lg-4 footer-newsletter mb-4" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <h6 class="text-uppercase fw-bold mb-3">Subscribe to Our Newsletter</h6>
+                        <p class="small" style="color: rgb(182, 180, 180);">Get the latest updates, insights, and
+                            regulatory alerts straight to your inbox.</p>
+                        <form>
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+
+                    <!-- Footer Bottom -->
+                    <p class="footer-line"></p>
+                    <div class="footer-bottom row px-3 px-md-5 py-3" data-aos="fade-up">
+                        <p class="col-12 col-sm-6 col-md-6 col-lg-4">
+                            <i class="fa-regular fa-copyright pe-2"></i>
+                            2025 Hisho & Kanri Pvt Ltd. All Rights Reserved.
+                        </p>
+
+                        <div class="footer-links col-12 col-sm-6 col-md-6 col-lg-4">
+                            <a href="legal.html" class="pe-3">Legal</a>
+                            <a href="privacy.html" class="pe-3">Privacy</a>
+                            <a href="accessibility.html" class="pe-3">Accessibility</a>
+                            <a href="help.html" class="pe-3">Help</a>
+                        </div>
+
+                        <div class="footer-social-links mt-4 mt-md-0 col-12 col-sm-6 col-md-6 col-lg-4">
+                            <a href="https://www.instagram.com/hisho_kanri/"> <i class="fa-brands fa-instagram"
+                                    id="instagram"></i> </a>
+                            <a href="https://www.facebook.com/profile.php?id=61574683414836"> <i
+                                    class="fa-brands fa-facebook-f" id="facebook"></i> </a>
+                            <a href="https://www.linkedin.com/in/hisho-kanri/"> <i class="fa-brands fa-linkedin-in"
+                                    id="inkedin"></i> </a>
+                            <a href="https://x.com/HishoK47102"> <i class="fa-brands fa-x-twitter" id="twitter"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@HISHOKANRI"> <i class="fa-brands fa-youtube"
+                                    id="youtube"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"> </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const timeline = document.querySelector(".timeline");
+
+            function checkScroll() {
+                const rect = timeline.getBoundingClientRect();
+                if (rect.top <= window.innerHeight - 100) {
+                    timeline.classList.add("animate-line");
+                    window.removeEventListener("scroll", checkScroll);
+                }
+            }
+
+            window.addEventListener("scroll", checkScroll);
+            checkScroll();
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"> </script>
+</body>
+
+</html>

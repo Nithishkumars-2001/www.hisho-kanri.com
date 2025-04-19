@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Indian Services </title>
+
+    <!--My css-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/company logo icon.png" type="image/png">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body style="background-color:aliceblue;">
+
+    <!-- NavBar -->
+    <nav id="Navbar" class="navbar px-3 px-md-5 py-md-1">
+        <div class="website-name text-white">
+            <img src="img/company logo icon.png" alt="">
+            <h2 class="logo-style ps-2"> <span style="color: rgb(75, 3, 109)">Hisho </span> & Kanri </h2>
+        </div>
+
+        <div class="navbar-menu pe-5">
+            <ul class="navbar-menu-links text-white">
+                <a href="home.html">
+                    <li> Home </li>
+                </a>
+
+                <a href="about.html">
+                    <li> About US</li>
+                </a>
+
+                <a href="#" class="dropdown-service">
+                    <li id="serviceToggle"> Service </li>
+                </a>
+
+                <a href="insights.html">
+                    <li> News & insights </li>
+                </a>
+
+                <a href="careers.html">
+                    <li> Careers </li>
+                </a>
+
+                <a href="contact.html">
+                    <li> Contact </li>
+                </a>
+            </ul>
+
+            <div class="login-btn ms-4">
+                <a href="login.html"> <button> <i class="fa-solid fa-right-to-bracket"></i> Login </button> </a>
+            </div>
+        </div>
+
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+            <i class="bi bi-list"></i>
+        </div>
+    </nav>
+
+    <!-- India Service Header -->
+    <header class="service-header text-white py-5">
+        <div class="bg-wrapper">
+            <img src="img/indian-header-img.jpg" alt="Malaysia Service" class="bg-image">
+        </div>
+        <div class="container text-center">
+            <h6 class="text-warning mb-2">Empowering Indian Enterprises</h6>
+            <h1 class="display-5 fw-bold">Accounting & Compliance Solutions in India</h1>
+            <p class="lead mt-3 fw-normal">Tailored services for Indian tax systems, MCA regulations, and growing local
+                businesses.</p>
+        </div>
+    </header>
+
+    <!--Side Navbar-->
+    <aside class="side-navbar">
+        <p class="cross-symbol" onclick="closenavbar()"> <i class="fa fa-times" aria-hidden="true"></i> </p>
+
+        <img src="img/company-logo.png" alt="">
+
+        <!--
+        <div class="website-name">
+            <h2 class="logo-style" style="font-size: 20px;"> Hisho & Kanri </h2>
+        </div>
+        -->
+
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"> <a href="home.html"> Home </a> </p>
+            <p class="side-navbar-link"> <a href="about.html"> About </a> </p>
+            <p class="side-navbar-link" onclick="toggleTopServiceDropdown()">
+                <a href="#" class="dropdown-service">
+                    <span id="serviceToggle"> Service </span>
+                </a>
+            </p>
+            <p class="side-navbar-link"> <a href="insights.html"> News & insights </a> </p>
+            <p class="side-navbar-link"> <a href="careers.html"> Careers </a> </p>
+            <p class="side-navbar-link"> <a href="contact.html"> Contact </a> </p>
+            <a href="login.html"><button> <i class="fa-solid fa-right-to-bracket"></i> Login </button></a>
+        </div>
+    </aside>
+
+    <main class="service-main-content">
+        <!-- Service option-->
+        <div class="service-dropdown" id="serviceDropdown">
+            <div class="dropdown-title pb-2">
+                <h5> Select Your Country </h5>
+            </div>
+
+            <a href="IndianService.html" class="service-item d-flex align-items-center">
+                <img src="img/india-flag.jpg" alt="India" class="flag-icon mx-2">
+                <span> India </span>
+            </a>
+
+            <a href="SingaporeService.html" class="service-item d-flex align-items-center">
+                <img src="img/singapore-flag.jpg" alt="Singapore" class="flag-icon mx-2">
+                <span> Singapore </span>
+            </a>
+
+            <a href="MalaysiaService.html" class="service-item d-flex align-items-center">
+                <img src="img/malaysian flag.jpg" alt="Malaysia" class="flag-icon mx-2">
+                <span> Malaysia </span>
+            </a>
+        </div>
+
+        <!--Sidebar service option-->
+        <div id="topServiceDropdown" class="top-service-dropdown">
+            <div class="dropdown-title pb-2">
+                <h5> Select Your Country </h5>
+            </div>
+
+            <a href="IndianService.html" class="service-item d-flex align-items-center">
+                <img src="img/india-flag.jpg" alt="India" class="flag-icon mx-2">
+                <span> India </span>
+            </a>
+
+            <a href="SingaporeService.html" class="service-item d-flex align-items-center">
+                <img src="img/singapore-flag.jpg" alt="Singapore" class="flag-icon mx-2">
+                <span> Singapore </span>
+            </a>
+
+            <a href="MalaysiaService.html" class="service-item d-flex align-items-center">
+                <img src="img/malaysian flag.jpg" alt="Malaysia" class="flag-icon mx-2">
+                <span> Malaysia </span>
+            </a>
+        </div>
+
+        <!-- Service Details -->
+        <section class="service-content row g-0">
+            <!-- Sidebar -->
+            <div class="col-md-3 services-sidebar p-4 py-5" id="servicesMenu">
+                <h4 class="mb-3" style="color: rgb(247, 37, 124);">Services</h4>
+                <hr>
+                <a href="#" class="active" onclick="showSection(event, 'secretary-service')">
+                    <h5> Company Secretary Service </h5>
+                </a>
+                <a href="#" onclick="showSection(event, 'accounting-advisory')">
+                    <h5> Accounting Advisory and Vertual CFO </h5>
+                </a>
+                <a href="#" onclick="showSection(event, 'accounts-book-keeping')">
+                    <h5> Accounts & Book Keeping </h5>
+                </a>
+                <a href="#" onclick="showSection(event, 'accounts-outsoursing')">
+                    <h5> Accounts Outsoursing </h5>
+                </a>
+                <a href="#" onclick="showSection(event, 'taxtion')">
+                    <h5> Taxtion </h5>
+                </a>
+                <a href="#" onclick="showSection(event, 'payroll-service')">
+                    <h5> Payroll Service </h5>
+                </a>
+                <a href="#" onclick="showSection(event, 'licences')">
+                    <h5> Licences </h5>
+                </a>
+                <a href="#" onclick="showSection(event, 'imigration-regulotry-advisory')">
+                    <h5> Imigration and Regulotry Advisory </h5>
+                </a>
+                <a href="#" onclick="showSection(event, 'digital-service')">
+                    <h5> Digital Service </h5>
+                </a>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content-area col-md-9 p-4 py-5">
+                <!-- Company Secretary Service Section -->
+                <div id="secretary-service" class="service-section active">
+                    <h3 class="service-title">Company Secretary Service</h3>
+                    <hr>
+                    <p class="px-2"> We offer professional company secretarial services including incorporation,
+                        statutory compliance, corporate restructuring, and ongoing governance support to ensure your
+                        business meets legal obligations seamlessly. </p>
+                    <a href="#" class="read-more px-2">
+                        <h6> Read More </h6>
+                        <i class="fa-solid fa-arrow-right-long ps-2"></i>
+                    </a>
+                    <hr>
+
+                    <div class="row g-4">
+                        <!-- Company Incorporation -->
+                        <div class="col-md-6 service-box">
+                            <h6 onclick="toggleSubServices('incorporation-services')">
+                                Company Incorporation <span> <i class="fa-solid fa-angle-down"></i> </span>
+                            </h6>
+                            <p class="text-muted">We offer end-to-end company incorporation services including name
+                                search, registration with SSM, constitution drafting, and setup for both local and
+                                foreign-owned entities in Malaysia.</p>
+
+                            <div id="incorporation-services" class="d-none">
+                                <p class="sub-service">Local Company</p>
+                                <p class="sub-service">Foreign Company</p>
+                                <p class="sub-service">Labuan Company</p>
+                                <p class="sub-service">Readymade Company</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6>Business Consultancy</h6>
+                            <p class="text-muted">Strategic guidance to grow your business efficiently.</p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6>Normal Secretarial Maintenance</h6>
+                            <p class="text-muted">Annual compliance and records maintenance.</p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6>Corporate Restructuring</h6>
+                            <p class="text-muted">Adapt and grow with effective restructuring strategies.</p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6>Constitutions</h6>
+                            <p class="text-muted">Drafting, amending, and maintaining your company constitution.</p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Company Restructuring </h6>
+                            <p class="text-muted">Drafting, amending, and maintaining your company constitution.</p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Nominee Shareholder and Direcots </h6>
+                            <p class="text-muted">Drafting, amending, and maintaining your company constitution.</p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Winding Up </h6>
+                            <p class="text-muted">Drafting, amending, and maintaining your company constitution.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accounting Advisory and Vertual CFO -->
+                <div id="accounting-advisory" class="service-section">
+                    <h2 class="service-title"> Accounting Advisory and Vertual CFO </h2>
+                    <hr>
+                    <p> Our Accounting Advisory and Virtual CFO services provide expert financial guidance, strategic
+                        planning, compliance support, and real-time insights to help businesses make informed decisions
+                        and drive sustainable growth. </p>
+                    <a href="#" class="read-more px-2">
+                        <h6> Read More </h6>
+                        <i class="fa-solid fa-arrow-right-long ps-2"></i>
+                    </a>
+                    <hr>
+
+                    <div class="row g-4">
+                        <div class="col-md-6 service-box">
+                            <h6> Financial Reporting </h6>
+                            <p class="text-muted"> Assistance with accurate financial statement preparation. </p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6> Strategic Financial Planning </h6>
+                            <p class="text-muted"> Roadmap for business growth through financial insight. </p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6> IFRS/GAAP Compliance </h6>
+                            <p class="text-muted"> Expert guidance on international and local accounting standards. </p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6> Cash Flow Management </h6>
+                            <p class="text-muted"> Monitor and optimize day-to-day cash flow. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Internal Controls Assessment </h6>
+                            <p class="text-muted"> Design and review of processes to ensure data integrity. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Budgeting & Forecasting </h6>
+                            <p class="text-muted"> Predict future performance based on financial data. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Audit Preparation & Support </h6>
+                            <p class="text-muted"> Get ready for statutory and internal audits. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Fundraising & Investor Reporting </h6>
+                            <p class="text-muted"> Help with pitch decks, financial reports for VCs/investors. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Technical Accounting Support </h6>
+                            <p class="text-muted"> For complex transactions like mergers or lease accounting. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> KPI Tracking & Insights </h6>
+                            <p class="text-muted"> Regular reports on financial health and progress. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accounts & Book Keeping -->
+                <div id="accounts-book-keeping" class="service-section">
+                    <h2 class="service-title"> Accounts & Book Keeping </h2>
+                    <hr>
+                    <p> We provide accurate and timely bookkeeping, financial reporting, and account maintenance
+                        services to ensure your business stays organized, compliant, and audit-ready. </p>
+                    <a href="#" class="read-more px-2">
+                        <h6> Read More </h6>
+                        <i class="fa-solid fa-arrow-right-long ps-2"></i>
+                    </a>
+                    <hr>
+                    <div class="row g-4">
+                        <div class="col-md-6 service-box">
+                            <h6> Day-to-Day Transaction Recording </h6>
+                            <p class="text-muted"> Accurate entry of all business transactions in accounting software.
+                            </p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6> Accounts Payable & Receivable Management </h6>
+                            <p class="text-muted"> Track money owed and incoming payments efficiently. </p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6> Bank Reconciliation </h6>
+                            <p class="text-muted"> Regularly match company books with bank statements. </p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6> Ledger Maintenance </h6>
+                            <p class="text-muted"> Maintain clean and up-to-date general ledger for all accounts. </p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6> Monthly/Quarterly Financial Reports </h6>
+                            <p class="text-muted"> Get balance sheets, P&L, and cash flow statements on time. </p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6> Inventory & Asset Tracking </h6>
+                            <p class="text-muted"> Keep track of physical inventory and fixed assets. </p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6> GST/SST/VAT Record Keeping </h6>
+                            <p class="text-muted"> Proper recording of tax-related entries for compliance. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accounts Outsoursing -->
+                <div id="accounts-outsoursing" class="service-section">
+                    <h2 class="service-title"> Accounts Outsoursing </h2>
+                    <hr>
+                    <p> Our Accounts Outsourcing services help businesses reduce costs and improve efficiency by
+                        managing day-to-day accounting tasks, payroll, and financial reporting through expert external
+                        support. </p>
+                    <a href="#" class="read-more px-2">
+                        <h6> Read More </h6>
+                        <i class="fa-solid fa-arrow-right-long ps-2"></i>
+                    </a>
+                    <hr>
+                    <div class="row g-4">
+                        <div class="col-md-6 service-box">
+                            <h6> End-to-End Accounting Services </h6>
+                            <p class="text-muted"> From data entry to final reporting – everything managed by
+                                professionals. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Cloud-Based Bookkeeping </h6>
+                            <p class="text-muted"> Access your accounts anytime, anywhere using cloud accounting tools.
+                            </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Payroll Processing & Compliance </h6>
+                            <p class="text-muted"> Monthly salary calculation, payslips, EPF, ESI, and tax deductions
+                                handled. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Accounts Payable & Receivable Support </h6>
+                            <p class="text-muted"> Vendor payments and customer collections, all managed seamlessly.
+                            </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Financial Reporting & Analysis </h6>
+                            <p class="text-muted"> Get insights from monthly reports, P&L, balance sheet, and cash flow.
+                            </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Audit-Ready Books </h6>
+                            <p class="text-muted"> Maintain your accounts in a way that’s always ready for audits. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Cost-Effective Resource Management </h6>
+                            <p class="text-muted"> Save costs by outsourcing instead of hiring full-time finance staff.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Taxtion -->
+                <div id="taxtion" class="service-section">
+                    <h2 class="service-title"> Taxtion </h2>
+                    <hr>
+                    <p> We provide comprehensive tax services including compliance, planning, and advisory to help
+                        businesses minimize liabilities and navigate complex tax regulations effectively. </p>
+                    <a href="#" class="read-more px-2">
+                        <h6> Read More </h6>
+                        <i class="fa-solid fa-arrow-right-long ps-2"></i>
+                    </a>
+                    <hr>
+                    <div class="row g-4">
+                        <div class="col-md-6 service-box">
+                            <h6> Corporate Tax Compliance and Planning Services </h6>
+                            <p class="text-muted"> We provide end-to-end support for corporate tax return preparation,
+                                filing, and statutory compliance. </p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6 onclick="toggleSubServices('incometax-services')">
+                                Personal Income Tax Services <span> <i class="fa-solid fa-angle-down"></i> </span>
+                            </h6>
+
+                            <div id="incometax-services" class="d-none">
+                                <p class="sub-service"> Salary </p>
+                                <p class="sub-service"> Business </p>
+                            </div>
+                            <p class="text-muted"> Tax planning and filing for individuals, including salaried
+                                professionals and business owners. </p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6> GST/SST/VAT Compliance </h6>
+                            <p class="text-muted"> Registration, filing, and record-keeping for Goods & Services Tax or
+                                Sales/Service Tax. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Tax Planning & Advisory </h6>
+                            <p class="text-muted"> Strategies to reduce tax liability legally and efficiently. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Transfer Pricing Compliance </h6>
+                            <p class="text-muted"> Ensure international transactions comply with tax regulations. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Tax Audit Assistance </h6>
+                            <p class="text-muted"> Help with document preparation and representation during tax audits.
+                            </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Withholding Tax Services </h6>
+                            <p class="text-muted"> Guidance and filing of withholding taxes on domestic or international
+                                payments. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Professional Tax Registration </h6>
+                            <p class="text-muted"> Handle state-level tax registration for professionals and employers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payroll Service -->
+                <div id="payroll-service" class="service-section">
+                    <h2 class="service-title"> Payroll Service </h2>
+                    <hr>
+                    <p> We offer end-to-end payroll services including salary computation, statutory contributions,
+                        payslip generation, and regulatory compliance to ensure smooth and accurate payroll management.
+                    </p>
+                    <a href="#" class="read-more px-2">
+                        <h6> Read More </h6>
+                        <i class="fa-solid fa-arrow-right-long ps-2"></i>
+                    </a>
+                    <hr>
+
+                    <div class="row g-4">
+                        <div class="col-md-6 service-box">
+                            <h6> Monthly Payroll Processing </h6>
+                            <p class="text-muted"> Accurate calculation of salaries, allowances, deductions, and
+                                bonuses. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Payslip Generation & Distribution </h6>
+                            <p class="text-muted"> Secure digital or printed payslips for all employees. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> EPF, ESI, and Statutory Compliance </h6>
+                            <p class="text-muted"> Timely contributions and filings with government portals. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> TDS Calculation & Filing </h6>
+                            <p class="text-muted"> Deduction of tax at source and filing of returns. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Leave & Attendance Integration </h6>
+                            <p class="text-muted"> Sync with HR systems to calculate leaves and overtime. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Employee Reimbursement Management </h6>
+                            <p class="text-muted"> Handle claims like travel, medical, and other reimbursements. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Full & Final Settlements </h6>
+                            <p class="text-muted"> Smooth exit formalities and final payments for resigning employees.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Licences -->
+                <div id="licences" class="service-section">
+                    <h2 class="service-title"> Licences </h2>
+                    <hr>
+                    <p> We assist in obtaining, renewing, and managing various business licenses including DBKL, MPK,
+                        MPPJ, MPS, WRT, MIDA, CIDB, and MD Status to ensure full regulatory compliance and smooth
+                        business operations. </p>
+                    <a href="#" class="read-more px-2">
+                        <h6> Read More </h6>
+                        <i class="fa-solid fa-arrow-right-long ps-2"></i>
+                    </a>
+                    <hr>
+
+                    <div class="row g-4">
+                        <div class="col-md-6 service-box">
+                            <h6 onclick="toggleSubServices('local-councils-service')">
+                                DBKL. MPK. MPPJ, MPS <span> <i class="fa-solid fa-angle-down"></i> </span>
+                            </h6>
+
+                            <div id="local-councils-service" class="d-none">
+                                <p class="sub-service"> ✦ DBKL ( Dewan Bandaraya Kuala Lumpur )</p>
+                                <P> Kuala Lumpur City Hall – handles licensing, signage, premises, and more within KL.
+                                </P>
+                                <p class="sub-service"> ✦ MPK ( Majlis Perbandaran Klang )</p>
+                                <P> Klang Municipal Council – oversees business operations and local regulations in
+                                    Klang.. </P>
+                                <p class="sub-service"> ✦ DBKL ( Dewan Bandaraya Kuala Lumpur )</p>
+                                <P> Petaling Jaya City Council – handles all local authority services for PJ area. </P>
+                                <p class="sub-service"> ✦ MPS ( Majlis Perbandaran Selayang )</p>
+                                <P> Selayang Municipal Council – authority for businesses in the Selayang region. </P>
+                            </div>
+
+                            <p>We provide complete support for business and signage license applications across major
+                                local councils including DBKL, MPK, MPPJ, and MPS.</p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6> MIDA </h6>
+                            <p class="text-muted"> We assist businesses with approvals, incentives, and compliance
+                                through the Malaysian Investment Development Authority (MIDA) to support local and
+                                foreign investments. </p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6> MD SATUS/ICT </h6>
+                            <p class="text-muted"> We assist tech-driven companies in obtaining MD Status (formerly MSC
+                                Status), providing access to tax incentives, grants, and other benefits under Malaysia’s
+                                digital economy framework. </p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6> CIDB </h6>
+                            <p class="text-muted"> We support businesses in registering with the Construction Industry
+                                Development Board (CIDB) to ensure compliance for construction-related projects and
+                                contractor licensing in Malaysia. </p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6> WRT </h6>
+                            <p class="text-muted"> We handle Wholesale Retail Trade (WRT) license applications for
+                                foreign-owned companies, ensuring compliance with Malaysia’s Ministry of Domestic Trade
+                                regulations. </p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6> Business Registration License </h6>
+                            <p class="text-muted"> Assistance with obtaining licenses to legally operate businesses.
+                            </p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6> Import/Export License (IEC) </h6>
+                            <p class="text-muted"> Get your Importer Exporter Code and related compliance done. </p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6> FSSAI License </h6>
+                            <p class="text-muted"> Licensing for food-related businesses under the Food Safety &
+                                Standards Authority. </p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6> MSME/SME Registration </h6>
+                            <p class="text-muted"> Register under Micro, Small & Medium Enterprises to enjoy government
+                                benefits. </p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6> Trade License </h6>
+                            <p class="text-muted"> Apply for local municipal trade licenses for business operation. </p>
+                        </div>
+
+                        <div class="col-md-6 service-box">
+                            <h6> Fire & Safety Compliance License </h6>
+                            <p class="text-muted"> Guidance and support for applying safety certifications required for
+                                workplaces. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  Imigration and Regulotry Advisory -->
+                <div id="imigration-regulotry-advisory" class="service-section">
+                    <h2 class="service-title"> Imigration and Regulotry Advisory </h2>
+                    <hr>
+                    <p> We provide expert guidance on immigration matters, work permits, expatriate services, and
+                        regulatory compliance to help businesses and individuals navigate Malaysia’s legal landscape
+                        smoothly. </p>
+                    <a href="#" class="read-more px-2">
+                        <h6> Read More </h6>
+                        <i class="fa-solid fa-arrow-right-long ps-2"></i>
+                    </a>
+                    <hr>
+
+                    <div class="row g-4">
+                        <div class="col-md-6 service-box">
+                            <h6> Work Permit & Employment Pass Services </h6>
+                            <p class="text-muted"> Assistance with obtaining legal work authorizations for foreign
+                                employees. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Visa & Residency Advisory </h6>
+                            <p class="text-muted"> Support with visa applications, renewals, and permanent residency.
+                            </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Company Immigration Compliance </h6>
+                            <p class="text-muted"> Ensure your business meets all immigration-related legal obligations.
+                            </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Regulatory Licensing Support </h6>
+                            <p class="text-muted"> Help with obtaining and renewing sector-specific licenses and
+                                permits. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Cross-Border Employee Mobility </h6>
+                            <p class="text-muted"> Guidance for relocating staff across countries with legal compliance.
+                            </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Expatriate Tax Advisory </h6>
+                            <p class="text-muted"> Tax planning and compliance for foreign nationals working in your
+                                company. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Government Liaison Services </h6>
+                            <p class="text-muted"> End-to-end support for dealing with immigration departments and
+                                regulatory bodies. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Service -->
+                <div id="digital-service" class="service-section">
+                    <h2 class="service-title"> Digital Service </h2>
+                    <hr>
+                    <p> Our Digital Services include website development, system integration, cloud solutions, and
+                        digital transformation strategies to help businesses stay ahead in the tech-driven era. </p>
+                    <a href="#" class="read-more px-2">
+                        <h6> Read More </h6>
+                        <i class="fa-solid fa-arrow-right-long ps-2"></i>
+                    </a>
+                    <hr>
+
+                    <div class="row g-4">
+                        <div class="col-md-6 service-box">
+                            <h6> Website Design & Development </h6>
+                            <p class="text-muted"> Custom, responsive websites tailored to your business needs. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> E-commerce Solutions </h6>
+                            <p class="text-muted"> Full setup of online stores with payment gateway integration. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> SEO & Digital Marketing </h6>
+                            <p class="text-muted"> Boost your online presence with search engine optimization and
+                                targeted ads. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Mobile App Development </h6>
+                            <p class="text-muted"> Android and iOS apps with smooth UX and high performance. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Software as a Service (SaaS) </h6>
+                            <p class="text-muted"> Scalable web applications with cloud deployment options. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> UI/UX Design </h6>
+                            <p class="text-muted"> Clean, modern interfaces focused on user experience and conversion.
+                            </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Social Media Management </h6>
+                            <p class="text-muted"> Content creation, posting, and analytics for platforms like
+                                Instagram, LinkedIn, and more. </p>
+                        </div>
+                        <div class="col-md-6 service-box">
+                            <h6> Cloud Solutions & Hosting </h6>
+                            <p class="text-muted"> Cloud migration, secure hosting, and performance optimization. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lets Talk -->
+        <section class="lets-talk-box py-5 px-3" style="background-color: rgba(0, 0, 0, 0.4);">
+            <div class="lets-talk-content">
+                <h2 class="text-white" style="text-shadow: 1px 1px 2px #000;"> Need a help? Let's talk. </h2>
+                <h4 class="text-white"> Schedule a meeting for discussion </h4>
+            </div>
+
+            <div class="click-btn ms-md-5 mt-4 mt-md-0">
+                <a href="contact.html"> <button> Click Here </button> </a>
+            </div>
+        </section>
+
+        <!-- Chat Bot Toggle Button -->
+        <div class="chat-toggle" onclick="toggleChat()">
+            <img src="img/Chart-bot-robot.png" alt="robo-img">
+        </div>
+
+        <!-- Chat Bot Box -->
+        <div class="chatbox shadow" id="chatbox">
+            <div class="chat-header text-white px-3 py-3 d-flex justify-content-between align-items-center">
+                <span> Welcome to Hisho & Kanri</span>
+                <!--<button class="btn-close" onclick="toggleChat()"></button>-->
+                <div class="close-chart" onclick="toggleChat()">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+
+            <div class="chat-body p-3" id="chat-body">
+                <!--<div class="chat-message bot">Hi! How can I help you today? 😊 </div>-->
+            </div>
+
+            <div class="chat-footer d-flex">
+                <input type="text" class="form-control" id="chat-input" placeholder="Type a message...">
+                <button class="chart-send-btn" onclick="sendMessage()"> <i class="bi bi-send"></i> </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-box px-2 px-md-5 pt-5 pb-4">
+            <div class="container-fluid text-md-start">
+
+                <!-- Company Intro Paragraph -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <p class="text-center"> <span style="color: #f7257c; font-size: 23px;font-weight: 600;"> Hisho &
+                                Kanri
+                            </span> offers expert financial, accounting, and compliance services across
+                            India,
+                            Singapore, and Malaysia. We help businesses stay compliant and financially sound.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <!-- Quick Links -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up">
+                        <h6 class="text-uppercase fw-bold mb-3">Quick Links</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="home.html" class="text-decoration-none">Home</a></li>
+                            <li><a href="about.html" class="text-decoration-none">About Us</a></li>
+                            <li><a href="services.html" class="text-decoration-none">Our Services</a></li>
+                            <li><a href="contact.html" class="text-decoration-none">Contact</a></li>
+                            <li><a href="careers.html" class="text-decoration-none">Careers</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Company Resources -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <h6 class="text-uppercase fw-bold mb-3">Company Resources</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="insights.html" class="text-decoration-none">Insights & Blogs</a></li>
+                            <li><a href="help.html" class="text-decoration-none">FAQs</a></li>
+                            <li><a href="privacy.html" class="text-decoration-none">Privacy Policy</a></li>
+                            <li><a href="privacy.html" class="text-decoration-none">Terms & Conditions</a></li>
+                            <li><a href="#" class="text-decoration-none">Support</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Global Presence -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <h6 class="text-uppercase fw-bold mb-3">Global Presence</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="india.html" class="text-decoration-none">India Office</a></li>
+                            <li><a href="singapore.html" class="text-decoration-none">Singapore Office</a></li>
+                            <li><a href="malaysia.html" class="text-decoration-none">Malaysia Office</a></li>
+                            <li><a href="#" class="text-decoration-none">Future Locations</a></li>
+                            <li><a href="#" class="text-decoration-none">Partnerships</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Products -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="600">
+                        <h6 class="text-uppercase fw-bold mb-3">Our Products</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">Accounting Software</a></li>
+                            <li><a href="#" class="text-decoration-none">Tax Automation Tool</a></li>
+                            <li><a href="#" class="text-decoration-none">Payroll Management System</a></li>
+                            <li><a href="#" class="text-decoration-none">Compliance Tracker</a></li>
+                            <li><a href="#" class="text-decoration-none">CRM Tools</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Accounting Services -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up">
+                        <h6 class="text-uppercase fw-bold mb-3">Accounting Services</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">Bookkeeping</a></li>
+                            <li><a href="#" class="text-decoration-none">Tax Filing</a></li>
+                            <li><a href="#" class="text-decoration-none">Payroll</a></li>
+                            <li><a href="#" class="text-decoration-none">Bank Reconciliation</a></li>
+                            <li><a href="#" class="text-decoration-none">Invoice Management</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Compliance Management -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <h6 class="text-uppercase fw-bold mb-3">Compliance Management</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">GST Filing</a></li>
+                            <li><a href="#" class="text-decoration-none">ROC Compliance</a></li>
+                            <li><a href="#" class="text-decoration-none">Audit Support</a></li>
+                            <li><a href="#" class="text-decoration-none">Statutory Registrations</a></li>
+                            <li><a href="#" class="text-decoration-none">Compliance Calendar</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Business Setup -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <h6 class="text-uppercase fw-bold mb-3">Business Setup</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="register.html" class="text-decoration-none">Company Registration</a></li>
+                            <li><a href="#" class="text-decoration-none">Startup Advisory</a></li>
+                            <li><a href="legal.html" class="text-decoration-none">Legal Structure</a></li>
+                            <li><a href="#" class="text-decoration-none">LLP Formation</a></li>
+                            <li><a href="#" class="text-decoration-none">Business Name Search</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- India Contact -->
+                    <div class="county-contact col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <h6 class="text-uppercase fw-bold mb-3">India</h6>
+                        <p class="mb-1">Hisho & Kanri Pvt Ltd</p>
+                        <p class="mb-1"> Thanjavur, India </p>
+
+                        <p class="mb-1"><i class="bi bi-telephone-fill pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> +91
+                            8300693517 </p>
+                        <p class="mb-1"><i class="fa-solid fa-headphones  pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> +91 4362
+                            240009 </p>
+                        <p class="mb-0"><i class="bi bi-envelope-fill pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i>
+                            admin@hiskan.com </p>
+                    </div>
+
+                    <!-- Singapore Contact -->
+                    <div class="county-contact col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up"
+                        data-aos-delay="400">
+                        <h6 class="text-uppercase fw-bold mb-3">Singapore</h6>
+                        <p class="mb-1">Hisho & Kanri</p>
+                        <p class="mb-1">Raffles Place, Downtown</p>
+
+                        <p class="mb-1"><i class="bi bi-telephone-fill pe-3 pb-2"
+                                style="color:#f7257c;text-shadow:1px 1px 2px #000;"></i> +65 XXXX XXXX </p>
+                        <p class="mb-1"><i class="fa-solid fa-headphones  pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> +91 XXXX XXXXXX </p>
+                        <p class="mb-0"><i class="bi bi-envelope-fill pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> sg@hiskan.com </p>
+                    </div>
+
+                    <!-- Malaysia Contact -->
+                    <div class="county-contact col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up"
+                        data-aos-delay="500">
+                        <h6 class="text-uppercase fw-bold mb-3">Malaysia</h6>
+                        <p class="mb-1">Hisho & Kanri</p>
+                        <p class="mb-1">Kuala Lumpur City Centre</p>
+
+                        <p class="mb-1"><i class="bi bi-telephone-fill pe-3 pb-2"
+                                style="color:#f7257c;text-shadow:1px 1px 2px #000;"></i> +60 XXXX XXXX </p>
+                        <p class="mb-1"><i class="fa-solid fa-headphones  pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> +91 XXXX XXXXXX </p>
+                        <p class="mb-0"><i class="bi bi-envelope-fill pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> my@hiskan.com </p>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="col-12 col-md-8 col-lg-4 footer-newsletter mb-4" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <h6 class="text-uppercase fw-bold mb-3">Subscribe to Our Newsletter</h6>
+                        <p class="small" style="color: rgb(182, 180, 180);">Get the latest updates, insights, and
+                            regulatory alerts straight to your inbox.</p>
+                        <form>
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+
+                    <!-- Footer Bottom -->
+                    <p class="footer-line"></p>
+                    <div class="footer-bottom row px-3 px-md-5 py-3" data-aos="fade-up">
+                        <p class="col-12 col-sm-6 col-md-6 col-lg-4">
+                            <i class="fa-regular fa-copyright pe-2"></i>
+                            2025 Hisho & Kanri Pvt Ltd. All Rights Reserved.
+                        </p>
+
+                        <div class="footer-links col-12 col-sm-6 col-md-6 col-lg-4">
+                            <a href="legal.html" class="pe-3">Legal</a>
+                            <a href="privacy.html" class="pe-3">Privacy</a>
+                            <a href="accessibility.html" class="pe-3">Accessibility</a>
+                            <a href="help.html" class="pe-3">Help</a>
+                        </div>
+
+                        <div class="footer-social-links mt-4 mt-md-0 col-12 col-sm-6 col-md-6 col-lg-4">
+                            <a href="https://www.instagram.com/hisho_kanri/"> <i class="fa-brands fa-instagram"
+                                    id="instagram"></i> </a>
+                            <a href="https://www.facebook.com/profile.php?id=61574683414836"> <i
+                                    class="fa-brands fa-facebook-f" id="facebook"></i> </a>
+                            <a href="https://www.linkedin.com/in/hisho-kanri/"> <i class="fa-brands fa-linkedin-in"
+                                    id="inkedin"></i> </a>
+                            <a href="https://x.com/HishoK47102"> <i class="fa-brands fa-x-twitter" id="twitter"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@HISHOKANRI"> <i class="fa-brands fa-youtube"
+                                    id="youtube"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"> </script>
+</body>
+
+</html>

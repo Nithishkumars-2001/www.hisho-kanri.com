@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Accessibility | Hisho & Kanri Pvt Ltd </title>
+
+    <!--My css-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/company logo icon.png" type="image/png">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <!-- NavBar -->
+    <nav id="Navbar" class="navbar px-3 px-md-5 py-md-1">
+        <div class="website-name text-white">
+            <img src="img/company logo icon.png" alt="">
+            <h2 class="logo-style ps-2"> <span style="color: rgb(75, 3, 109)">Hisho </span> & Kanri </h2>
+        </div>
+
+        <div class="navbar-menu pe-5">
+            <ul class="navbar-menu-links text-white">
+                <a href="home.html">
+                    <li> Home </li>
+                </a>
+
+                <a href="about.html">
+                    <li> About US</li>
+                </a>
+
+                <a href="#" class="dropdown-service">
+                    <li id="serviceToggle"> Service </li>
+                </a>
+
+                <a href="insights.html">
+                    <li> News & insights </li>
+                </a>
+
+                <a href="careers.html">
+                    <li> Careers </li>
+                </a>
+
+                <a href="contact.html">
+                    <li> Contact </li>
+                </a>
+            </ul>
+
+            <div class="login-btn ms-4">
+                <a href="login.html"> <button> <i class="fa-solid fa-right-to-bracket"></i> Login </button> </a>
+            </div>
+        </div>
+
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+            <i class="bi bi-list"></i>
+        </div>
+    </nav>
+
+    <!--Side Navbar-->
+    <aside class="side-navbar">
+        <p class="cross-symbol" onclick="closenavbar()"> <i class="fa fa-times" aria-hidden="true"></i> </p>
+
+        <img src="img/company-logo.png" alt="">
+
+        <!--
+        <div class="website-name">
+            <h2 class="logo-style" style="font-size: 20px;"> Hisho & Kanri </h2>
+        </div>
+        -->
+
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"> <a href="home.html"> Home </a> </p>
+            <p class="side-navbar-link"> <a href="about.html"> About </a> </p>
+            <p class="side-navbar-link" onclick="toggleTopServiceDropdown()">
+                <a href="#" class="dropdown-service">
+                    <span id="serviceToggle"> Service </span>
+                </a>
+            </p>
+            <p class="side-navbar-link"> <a href="insights.html"> News & insights </a> </p>
+            <p class="side-navbar-link"> <a href="careers.html"> Careers </a> </p>
+            <p class="side-navbar-link"> <a href="contact.html"> Contact </a> </p>
+            <a href="login.html"><button> <i class="fa-solid fa-right-to-bracket"></i> Login </button></a>
+        </div>
+    </aside>
+
+    <!-- Header -->
+    <header class="accessibility-header text-center py-5 p-md-5  shadow-sm">
+        <div class="container">
+            <h1 class="section-title text-white">Accessibility at Hisho & Kanri Pvt
+                Ltd</h1>
+            <p class="lead mt-3 text-white" data-aos="fade-up" data-aos-delay="200">
+                We are committed to inclusivity and ensuring our services are accessible to everyone, regardless of
+                ability.
+            </p>
+        </div>
+    </header>
+
+    <main class="home-main-content">
+        <!-- Service option-->
+        <div class="service-dropdown" id="serviceDropdown">
+            <div class="dropdown-title pb-2">
+                <h5> Select Your Country </h5>
+            </div>
+
+            <a href="IndianService.html" class="service-item d-flex align-items-center">
+                <img src="img/india-flag.jpg" alt="India" class="flag-icon mx-2">
+                <span> India </span>
+            </a>
+
+            <a href="SingaporeService.html" class="service-item d-flex align-items-center">
+                <img src="img/singapore-flag.jpg" alt="Singapore" class="flag-icon mx-2">
+                <span> Singapore </span>
+            </a>
+
+            <a href="MalaysiaService.html" class="service-item d-flex align-items-center">
+                <img src="img/malaysian flag.jpg" alt="Malaysia" class="flag-icon mx-2">
+                <span> Malaysia </span>
+            </a>
+        </div>
+
+        <!--Sidebar service option-->
+        <div id="topServiceDropdown" class="top-service-dropdown">
+            <div class="dropdown-title pb-2">
+                <h5> Select Your Country </h5>
+            </div>
+
+            <a href="IndianService.html" class="service-item d-flex align-items-center">
+                <img src="img/india-flag.jpg" alt="India" class="flag-icon mx-2">
+                <span> India </span>
+            </a>
+
+            <a href="SingaporeService.html" class="service-item d-flex align-items-center">
+                <img src="img/singapore-flag.jpg" alt="Singapore" class="flag-icon mx-2">
+                <span> Singapore </span>
+            </a>
+
+            <a href="MalaysiaService.html" class="service-item d-flex align-items-center">
+                <img src="img/malaysian flag.jpg" alt="Malaysia" class="flag-icon mx-2">
+                <span> Malaysia </span>
+            </a>
+        </div>
+
+        <div class="accessibilty-content">
+
+            <!-- Accessibility Principles -->
+            <section class="accessibility-principles py-5">
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <h2 class="section-title" id="principlesTitle" style="color: #f7257c;">Our Accessibility
+                            Principles</h2>
+                        <p class="text-muted">We believe accessibility is not just a feature — it's a fundamental right.
+                            Here’s
+                            how
+                            we make our digital experience inclusive for all.</p>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="accessibility-card card-body">
+                                    <h5 class="card-title"><i class="bi bi-layout-text-window-reverse me-3"></i>Clear
+                                        Structure</h5>
+                                    <p class="card-text">We build websites with logical content hierarchy and intuitive
+                                        navigation
+                                        to simplify browsing for all users.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="accessibility-card card-body">
+                                    <h5 class="card-title"><i class="bi bi-ear me-3"></i>Assistive Tech
+                                        Friendly
+                                    </h5>
+                                    <p class="card-text">Our content is optimized for screen readers and supports
+                                        various
+                                        assistive
+                                        technologies.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="accessibility-card card-body">
+                                    <h5 class="card-title"><i class="bi bi-eyedropper me-3"></i>Readable
+                                        Design
+                                    </h5>
+                                    <p class="card-text">We ensure high contrast, clean fonts, and scalable text for
+                                        easy
+                                        reading
+                                        and visual comfort.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="accessibility-card card-body">
+                                    <h5 class="card-title"><i class="bi bi-keyboard me-3"></i>Keyboard
+                                        Accessibility
+                                    </h5>
+                                    <p class="card-text">All features and interactions are fully operable using only a
+                                        keyboard.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="accessibility-card card-body">
+                                    <h5 class="card-title"><i class="bi bi-image-alt me-3"></i>Descriptive
+                                        Media
+                                    </h5>
+                                    <p class="card-text">Images and videos include meaningful alt text, captions, and
+                                        transcripts
+                                        where needed.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="accessibility-card card-body">
+                                    <h5 class="card-title"><i class="bi bi-check2-square me-3"></i>WCAG
+                                        Compliance
+                                    </h5>
+                                    <p class="card-text">We follow global accessibility standards like WCAG to meet and
+                                        exceed
+                                        compliance requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="accessibility-card card-body">
+                                    <h5 class="card-title"><i class="bi bi-lightning-charge me-3"></i>No
+                                        Harmful
+                                        Animations</h5>
+                                    <p class="card-text">We avoid flashing/strobing content and offer the option to
+                                        reduce
+                                        motion
+                                        where possible.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="accessibility-card card-body">
+                                    <h5 class="card-title"><i class="bi bi-person-lines-fill me-3"></i>User
+                                        Feedback
+                                    </h5>
+                                    <p class="card-text">We value your feedback and are committed to ongoing improvement
+                                        in
+                                        accessibility and usability.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="accessibility-card card-body">
+                                    <h5 class="card-title">
+                                        <i class="bi bi-search me-3"></i>Accessible Forms
+                                    </h5>
+                                    <p class="card-text">We use clear labels, error messages, and focus indicators to
+                                        make
+                                        forms
+                                        fully accessible.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="accessibility-card card-body">
+                                    <h5 class="card-title">
+                                        <i class="bi bi-arrows-angle-contract me-3"></i>Responsive
+                                        Accessibility
+                                    </h5>
+                                    <p class="card-text">Our designs adapt to all screen sizes and devices while
+                                        maintaining
+                                        accessibility standards.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="accessibility-card card-body">
+                                    <h5 class="card-title">
+                                        <i class="bi bi-box-arrow-in-down-left me-3"></i>Skip Links
+                                    </h5>
+                                    <p class="card-text">We include skip-to-content links and landmarks for quick
+                                        keyboard
+                                        navigation.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="accessibility-card card-body">
+                                    <h5 class="card-title">
+                                        <i class="bi bi-palette2 me-3"></i>Theme Customization
+                                    </h5>
+                                    <p class="card-text">We plan to offer options for high contrast and dark mode themes
+                                        to
+                                        suit
+                                        user needs.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Accessibility Matters -->
+            <section class="accessibility-matters py-3">
+                <div class="container">
+                    <div class="access-section" role="region" aria-labelledby="whyAccessTitle" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                        <h2 id="whyAccessTitle" class="section-title mb-4" style="color: #f7257c;">Why Accessibility
+                            Matters</h2>
+
+                        <p>
+                            At <strong>Hisho & Kanri</strong>, accessibility isn’t just a checkbox — it’s a commitment
+                            to equity,
+                            inclusion, and better user experience. We believe everyone deserves equal access to
+                            information,
+                            services, and opportunities, regardless of ability.
+                        </p>
+
+                        <p>
+                            From navigating our website to interacting with our accounting and compliance solutions, we
+                            want every
+                            user to feel supported and empowered. A truly accessible experience builds trust, reduces
+                            frustration,
+                            and shows respect for every individual’s unique needs.
+                        </p>
+
+                        <p>
+                            We proudly serve a wide range of businesses and professionals across <strong>Singapore,
+                                Malaysia, and
+                                India</strong>, and our solutions are designed to be inclusive for all — including those
+                            with:
+                        </p>
+
+                        <ul class="list-unstyled ms-3 mb-4">
+                            <li> <i class="fa-solid fa-eye me-2"
+                                    style="color: #f7257c; text-shadow: 1px 1px 1px gray;"></i> Visual impairments (low
+                                vision, color blindness, blindness)</li>
+                            <li> <i class="bi bi-ear-fill me-2"
+                                    style="color: #f7257c;text-shadow: 1px 1px 1px gray;"></i> Auditory impairments
+                                (hearing loss, deafness)</li>
+                            <li> <i class="fa-solid fa-hand me-2"
+                                    style="color: #f7257c;text-shadow: 1px 1px 1px gray;"></i> Motor challenges (limited
+                                mobility, tremors, alternative navigation tools)</li>
+                            <li> <i class="fa-solid fa-brain me-2"
+                                    style="color: #f7257c;text-shadow: 1px 1px 1px gray;"></i> Cognitive differences
+                                (learning disabilities, memory or focus-related conditions)
+                            </li>
+                        </ul>
+
+                        <p>
+                            Creating accessible digital spaces is part of our ongoing mission to be a dependable,
+                            ethical, and
+                            forward-thinking professional firm. We're continually learning, listening to feedback, and
+                            improving our
+                            accessibility efforts to reflect evolving global standards.
+                        </p>
+
+                        <blockquote class="blockquote text-primary mt-4">
+                            <p class="mb-0 fst-italic">“Accessibility is not a feature, it’s a foundation. When we
+                                design for
+                                inclusion, everyone benefits.”</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact for Accessibility -->
+            <section class="contact-accessibility py-3">
+                <div class="container">
+                    <div class="access-section" role="region" aria-labelledby="contactTitle"
+                        style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                        <h2 id="contactTitle" class="section-title mb-4" style="color: #f7257c;"> Need Help or Have
+                            Feedback? </h2>
+
+                        <p>
+                            At <strong>Hisho & Kanri</strong>, we’re committed to making our services accessible for
+                            all. If you experience any barriers while using our website, or have ideas on how we can
+                            enhance accessibility, we’d truly appreciate your input.
+                        </p>
+
+                        <p>
+                            Your feedback helps us improve and ensures a better experience for everyone. Whether you're
+                            facing an issue, requesting accommodations, or just want to share suggestions — we’re here
+                            to listen.
+                        </p>
+
+                        <div class="row g-4 mt-4">
+                            <!-- Contact Options -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="p-3 border rounded h-100 shadow-sm">
+                                    <h5><i class="bi bi-envelope-fill me-3"
+                                            style="color: #f7257c;text-shadow: 1px 1px 1px gray;"></i>Email Us</h5>
+                                    <p class="mb-1">Send us a message anytime at:</p>
+                                    <a href="mailto:admin@hiskan.com"> admin@hiskan.com </a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-4">
+                                <div class="p-3 border rounded h-100 shadow-sm">
+                                    <h5><i class="bi bi-telephone-fill me-3"
+                                            style="color: #f7257c;text-shadow: 1px 1px 1px gray;"></i>Call Us</h5>
+                                    <ul class="list-unstyled mb-0">
+                                        <li><strong>Singapore:</strong> +65 1234 5678</li>
+                                        <li><strong>Malaysia:</strong> +60 17-557 9931 </li>
+                                        <li><strong>India:</strong> +91 83006 93517</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-4">
+                                <div class="p-3 border rounded h-100 shadow-sm">
+                                    <h5><i class="bi bi-chat-dots-fill me-3"
+                                            style="color: #f7257c;text-shadow: 1px 1px 1px gray;"></i>Live Chat Support
+                                    </h5>
+                                    <p class="mb-0">Chat with our accessibility team from 9AM to 6PM (local time) —
+                                        Monday to Friday.</p>
+                                    <a href="#" class="d-inline-block mt-2 text-decoration-underline"
+                                        onclick="toggleChat()">Start Chat</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="mt-4">
+                            We aim to respond to all accessibility-related messages within <strong>2 business
+                                days</strong>.
+                            Your voice helps us make a better experience for all — thank you!
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Lets Talk -->
+        <section class="lets-talk-box py-5 px-3" style="background-color: rgba(0, 0, 0, 0.4);">
+            <div class="lets-talk-content">
+                <h2 class="text-white" style="text-shadow: 1px 1px 2px #000;"> Need a help? Let's talk. </h2>
+                <h4 class="text-white"> Schedule a meeting for discussion </h4>
+            </div>
+
+            <div class="click-btn ms-md-5 mt-4 mt-md-0">
+                <a href="contact.html"> <button> Click Here </button> </a>
+            </div>
+        </section>
+
+        <!-- Chat Bot Toggle Button -->
+        <div class="chat-toggle" onclick="toggleChat()">
+            <img src="img/Chart-bot-robot.png" alt="robo-img">
+        </div>
+
+        <!-- Chat Bot Box -->
+        <div class="chatbox shadow" id="chatbox">
+            <div class="chat-header text-white px-3 py-3 d-flex justify-content-between align-items-center">
+                <div class="chartbox-title">
+                    <img src="img/company logo icon.png" alt="">
+                    <h5 style="text-shadow: 1px 1px 2px #000;"> Hi there 👋 </h5>
+                    <span> Welcome to Hisho & Kanri</span>
+                </div>
+                <!--<button class="btn-close" onclick="toggleChat()"></button>-->
+                <div class="close-chart" onclick="toggleChat()">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+
+            <div class="chat-body p-3" id="chat-body">
+                <!--<div class="chat-message bot">Hi! How can I help you today? 😊 </div>-->
+            </div>
+
+            <div class="chat-footer d-flex">
+                <input type="text" class="form-control" id="chat-input" placeholder="Type a message...">
+                <button class="chart-send-btn" onclick="sendMessage()"> <i class="bi bi-send"></i> </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-box px-2 px-md-5 pt-5 pb-4">
+            <div class="container-fluid text-md-start">
+
+                <!-- Company Intro Paragraph -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <p class="text-center"> <span style="color: #f7257c; font-size: 23px;font-weight: 600;"> Hisho &
+                                Kanri
+                            </span> offers expert financial, accounting, and compliance services across
+                            India,
+                            Singapore, and Malaysia. We help businesses stay compliant and financially sound.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <!-- Quick Links -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up">
+                        <h6 class="text-uppercase fw-bold mb-3">Quick Links</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="home.html" class="text-decoration-none">Home</a></li>
+                            <li><a href="about.html" class="text-decoration-none">About Us</a></li>
+                            <li><a href="services.html" class="text-decoration-none">Our Services</a></li>
+                            <li><a href="contact.html" class="text-decoration-none">Contact</a></li>
+                            <li><a href="careers.html" class="text-decoration-none">Careers</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Company Resources -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <h6 class="text-uppercase fw-bold mb-3">Company Resources</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="insights.html" class="text-decoration-none">Insights & Blogs</a></li>
+                            <li><a href="help.html" class="text-decoration-none">FAQs</a></li>
+                            <li><a href="privacy.html" class="text-decoration-none">Privacy Policy</a></li>
+                            <li><a href="privacy.html" class="text-decoration-none">Terms & Conditions</a></li>
+                            <li><a href="#" class="text-decoration-none">Support</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Global Presence -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <h6 class="text-uppercase fw-bold mb-3">Global Presence</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="india.html" class="text-decoration-none">India Office</a></li>
+                            <li><a href="singapore.html" class="text-decoration-none">Singapore Office</a></li>
+                            <li><a href="malaysia.html" class="text-decoration-none">Malaysia Office</a></li>
+                            <li><a href="#" class="text-decoration-none">Future Locations</a></li>
+                            <li><a href="#" class="text-decoration-none">Partnerships</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Products -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="600">
+                        <h6 class="text-uppercase fw-bold mb-3">Our Products</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">Accounting Software</a></li>
+                            <li><a href="#" class="text-decoration-none">Tax Automation Tool</a></li>
+                            <li><a href="#" class="text-decoration-none">Payroll Management System</a></li>
+                            <li><a href="#" class="text-decoration-none">Compliance Tracker</a></li>
+                            <li><a href="#" class="text-decoration-none">CRM Tools</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Accounting Services -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up">
+                        <h6 class="text-uppercase fw-bold mb-3">Accounting Services</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">Bookkeeping</a></li>
+                            <li><a href="#" class="text-decoration-none">Tax Filing</a></li>
+                            <li><a href="#" class="text-decoration-none">Payroll</a></li>
+                            <li><a href="#" class="text-decoration-none">Bank Reconciliation</a></li>
+                            <li><a href="#" class="text-decoration-none">Invoice Management</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Compliance Management -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <h6 class="text-uppercase fw-bold mb-3">Compliance Management</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">GST Filing</a></li>
+                            <li><a href="#" class="text-decoration-none">ROC Compliance</a></li>
+                            <li><a href="#" class="text-decoration-none">Audit Support</a></li>
+                            <li><a href="#" class="text-decoration-none">Statutory Registrations</a></li>
+                            <li><a href="#" class="text-decoration-none">Compliance Calendar</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Business Setup -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <h6 class="text-uppercase fw-bold mb-3">Business Setup</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="register.html" class="text-decoration-none">Company Registration</a></li>
+                            <li><a href="#" class="text-decoration-none">Startup Advisory</a></li>
+                            <li><a href="legal.html" class="text-decoration-none">Legal Structure</a></li>
+                            <li><a href="#" class="text-decoration-none">LLP Formation</a></li>
+                            <li><a href="#" class="text-decoration-none">Business Name Search</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- India Contact -->
+                    <div class="county-contact col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <h6 class="text-uppercase fw-bold mb-3">India</h6>
+                        <p class="mb-1">Hisho & Kanri Pvt Ltd</p>
+                        <p class="mb-1"> Thanjavur, India </p>
+
+                        <p class="mb-1"><i class="bi bi-telephone-fill pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> +91
+                            8300693517 </p>
+                        <p class="mb-1"><i class="fa-solid fa-headphones  pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> +91 4362
+                            240009 </p>
+                        <p class="mb-0"><i class="bi bi-envelope-fill pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i>
+                            admin@hiskan.com </p>
+                    </div>
+
+                    <!-- Singapore Contact -->
+                    <div class="county-contact col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up"
+                        data-aos-delay="400">
+                        <h6 class="text-uppercase fw-bold mb-3">Singapore</h6>
+                        <p class="mb-1">Hisho & Kanri</p>
+                        <p class="mb-1">Raffles Place, Downtown</p>
+
+                        <p class="mb-1"><i class="bi bi-telephone-fill pe-3 pb-2"
+                                style="color:#f7257c;text-shadow:1px 1px 2px #000;"></i> +65 XXXX XXXX </p>
+                        <p class="mb-1"><i class="fa-solid fa-headphones  pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> +91 XXXX XXXXXX </p>
+                        <p class="mb-0"><i class="bi bi-envelope-fill pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> sg@hiskan.com </p>
+                    </div>
+
+                    <!-- Malaysia Contact -->
+                    <div class="county-contact col-12 col-sm-6 col-md-4 col-lg-2 mb-4" data-aos="fade-up"
+                        data-aos-delay="500">
+                        <h6 class="text-uppercase fw-bold mb-3">Malaysia</h6>
+                        <p class="mb-1">Hisho & Kanri</p>
+                        <p class="mb-1">Kuala Lumpur City Centre</p>
+
+                        <p class="mb-1"><i class="bi bi-telephone-fill pe-3 pb-2"
+                                style="color:#f7257c;text-shadow:1px 1px 2px #000;"></i> +60 XXXX XXXX </p>
+                        <p class="mb-1"><i class="fa-solid fa-headphones  pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> +91 XXXX XXXXXX </p>
+                        <p class="mb-0"><i class="bi bi-envelope-fill pe-3 pb-2"
+                                style="color: #f7257c; text-shadow: 1px 1px 2px #000;"></i> my@hiskan.com </p>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="col-12 col-md-8 col-lg-4 footer-newsletter mb-4" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <h6 class="text-uppercase fw-bold mb-3">Subscribe to Our Newsletter</h6>
+                        <p class="small" style="color: rgb(182, 180, 180);">Get the latest updates, insights, and
+                            regulatory alerts straight to your inbox.</p>
+                        <form>
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+
+                    <!-- Footer Bottom -->
+                    <p class="footer-line"></p>
+                    <div class="footer-bottom row px-3 px-md-5 py-3" data-aos="fade-up">
+                        <p class="col-12 col-sm-6 col-md-6 col-lg-4">
+                            <i class="fa-regular fa-copyright pe-2"></i>
+                            2025 Hisho & Kanri Pvt Ltd. All Rights Reserved.
+                        </p>
+
+                        <div class="footer-links col-12 col-sm-6 col-md-6 col-lg-4">
+                            <a href="legal.html" class="pe-3">Legal</a>
+                            <a href="privacy.html" class="pe-3">Privacy</a>
+                            <a href="accessibility.html" class="pe-3">Accessibility</a>
+                            <a href="help.html" class="pe-3">Help</a>
+                        </div>
+
+                        <div class="footer-social-links mt-4 mt-md-0 col-12 col-sm-6 col-md-6 col-lg-4">
+                            <a href="https://www.instagram.com/hisho_kanri/"> <i class="fa-brands fa-instagram"
+                                    id="instagram"></i> </a>
+                            <a href="https://www.facebook.com/profile.php?id=61574683414836"> <i
+                                    class="fa-brands fa-facebook-f" id="facebook"></i> </a>
+                            <a href="https://www.linkedin.com/in/hisho-kanri/"> <i class="fa-brands fa-linkedin-in"
+                                    id="inkedin"></i> </a>
+                            <a href="https://x.com/HishoK47102"> <i class="fa-brands fa-x-twitter" id="twitter"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@HISHOKANRI"> <i class="fa-brands fa-youtube"
+                                    id="youtube"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"> </script>
+</body>
+
+</html>
